@@ -70,11 +70,11 @@ The amount collected for the New York State congestion surcharge.
 **`trip_dissatisfaction`**  
 A derived proxy for trip inefficiency, calculated as:
 
-\[
+$$
 \text{trip dissatisfaction}
 =
 \frac{\text{trip duration}}{\text{trip distance}}
-\]
+$$
 
 A higher value indicates more minutes spent per mile.
 

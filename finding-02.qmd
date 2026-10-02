@@ -80,17 +80,6 @@ Pickup and drop-off activity generally follows similar hourly patterns. Taxi act
 Comparing pickup and drop-off volumes by hour helps identify periods when the balance between incoming and outgoing taxi trips changes. These differences provide additional context for understanding potential supply-demand mismatches.
 
 
-### Pickup and Drop-off Imbalance
-
-The overall difference between pickup and drop-off activity highlights the boroughs where taxi flows are least balanced.
-
-<div id="finding2_chart4"></div>
-
-*Figure 4: Difference between pickup and drop-off volumes by borough.*
-
-The Bronx shows the most noticeable imbalance, with substantially more drop-offs than pickups. This pattern is consistent with taxis carrying passengers into the borough without an equivalent number of passenger-carrying trips originating there.
-
-
 ### Fare Patterns
 
 Fare distributions are generally similar across boroughs, but differences emerge when comparing trips by pickup and drop-off location.
