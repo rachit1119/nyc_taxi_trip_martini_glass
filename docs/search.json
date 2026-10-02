@@ -26,7 +26,7 @@
     "href": "limitations.html",
     "title": "Limitations",
     "section": "",
-    "text": "The original cleaned dataset contains 727,433 observations. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.\nAs a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.\n\n\n\nThe dataset does not contain a direct measure of passenger satisfaction.\nInstead, we use:\n\ntrip dissatisfaction;\npickup and drop-off imbalance;\nfare;\ntrip volume; and\ncongestion surcharge\n\nas observable proxies for aspects of the rider experience.\nThese variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.\n\n\n\nSome of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.\nIn particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.\n\n\n\nThe trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.\n\n\n\nSeveral views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.\nAggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.\n\n\n\nThe visualizations identify relationships and patterns in the data, but they do not establish causal relationships.\nFor example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.\n\n\n\nThe original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.\nAlthough the data-wrangling process attempted to address these issues, some unusual observations may remain.\n\n\n\nTaxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.",
+    "text": "The original cleaned dataset contains 727,433 observations. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.\nAs a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -45,8 +45,8 @@
     "objectID": "limitations.html#proxy-for-satisfaction",
     "href": "limitations.html#proxy-for-satisfaction",
     "title": "Limitations",
-    "section": "",
-    "text": "The dataset does not contain a direct measure of passenger satisfaction.\nInstead, we use:\n\ntrip dissatisfaction;\npickup and drop-off imbalance;\nfare;\ntrip volume; and\ncongestion surcharge\n\nas observable proxies for aspects of the rider experience.\nThese variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.",
+    "section": "Proxy for Satisfaction",
+    "text": "Proxy for Satisfaction\nThe dataset does not contain a direct measure of passenger satisfaction.\nInstead, we use:\n\ntrip dissatisfaction;\npickup and drop-off imbalance;\nfare;\ntrip volume; and\ncongestion surcharge\n\nas observable proxies for aspects of the rider experience.\nThese variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -55,8 +55,8 @@
     "objectID": "limitations.html#visual-complexity",
     "href": "limitations.html#visual-complexity",
     "title": "Limitations",
-    "section": "",
-    "text": "Some of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.\nIn particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.",
+    "section": "Visual Complexity",
+    "text": "Visual Complexity\nSome of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.\nIn particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -65,8 +65,8 @@
     "objectID": "limitations.html#individual-trip-visualization",
     "href": "limitations.html#individual-trip-visualization",
     "title": "Limitations",
-    "section": "",
-    "text": "The trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.",
+    "section": "Individual Trip Visualization",
+    "text": "Individual Trip Visualization\nThe trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -75,8 +75,8 @@
     "objectID": "limitations.html#aggregation",
     "href": "limitations.html#aggregation",
     "title": "Limitations",
-    "section": "",
-    "text": "Several views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.\nAggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.",
+    "section": "Aggregation",
+    "text": "Aggregation\nSeveral views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.\nAggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -85,8 +85,8 @@
     "objectID": "limitations.html#association-vs.-causation",
     "href": "limitations.html#association-vs.-causation",
     "title": "Limitations",
-    "section": "",
-    "text": "The visualizations identify relationships and patterns in the data, but they do not establish causal relationships.\nFor example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.",
+    "section": "Association vs. Causation",
+    "text": "Association vs. Causation\nThe visualizations identify relationships and patterns in the data, but they do not establish causal relationships.\nFor example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -95,8 +95,8 @@
     "objectID": "limitations.html#data-quality",
     "href": "limitations.html#data-quality",
     "title": "Limitations",
-    "section": "",
-    "text": "The original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.\nAlthough the data-wrangling process attempted to address these issues, some unusual observations may remain.",
+    "section": "Data Quality",
+    "text": "Data Quality\nThe original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.\nAlthough the data-wrangling process attempted to address these issues, some unusual observations may remain.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -105,8 +105,8 @@
     "objectID": "limitations.html#geographic-interpretation",
     "href": "limitations.html#geographic-interpretation",
     "title": "Limitations",
-    "section": "",
-    "text": "Taxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.",
+    "section": "Geographic Interpretation",
+    "text": "Geographic Interpretation\nTaxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.",
     "crumbs": [
       "Project Limitations"
     ]
@@ -127,7 +127,7 @@
     "href": "reference.html",
     "title": "References",
     "section": "",
-    "text": "New York City Taxi and Limousine Commission.\n2023 Green Taxi Trip Data. NYC Open Data.\nhttps://data.cityofnewyork.us/Transportation/2023-Green-Taxi-Trip-Data/2d59-ymk4\n\n\n\nNew York City Taxi and Limousine Commission.\nGreen Taxi Trip Data Dictionary.\n\n\n\nNew York City Taxi and Limousine Commission.\nTaxi Zone Lookup Table.\n\n\n\nThe dashboards were developed using Python, Pandas, NumPy, Altair, and Vega-Lite.\nThe final interactive website uses exported Vega-Lite JSON specifications embedded through vega-embed.\n\n\n\nFareSighted — NYC Taxi Trip Analysis\nTeam FareSighted",
+    "text": "New York City Taxi and Limousine Commission.\n2023 Green Taxi Trip Data. NYC Open Data.\nhttps://data.cityofnewyork.us/Transportation/2023-Green-Taxi-Trip-Data/2d59-ymk4",
     "crumbs": [
       "References & Sources"
     ]
@@ -146,8 +146,8 @@
     "objectID": "reference.html#data-dictionary",
     "href": "reference.html#data-dictionary",
     "title": "References",
-    "section": "",
-    "text": "New York City Taxi and Limousine Commission.\nGreen Taxi Trip Data Dictionary.",
+    "section": "Data Dictionary",
+    "text": "Data Dictionary\nNew York City Taxi and Limousine Commission.\nGreen Taxi Trip Data Dictionary.",
     "crumbs": [
       "References & Sources"
     ]
@@ -156,8 +156,8 @@
     "objectID": "reference.html#taxi-zone-information",
     "href": "reference.html#taxi-zone-information",
     "title": "References",
-    "section": "",
-    "text": "New York City Taxi and Limousine Commission.\nTaxi Zone Lookup Table.",
+    "section": "Taxi Zone Information",
+    "text": "Taxi Zone Information\nNew York City Taxi and Limousine Commission.\nTaxi Zone Lookup Table.",
     "crumbs": [
       "References & Sources"
     ]
@@ -166,8 +166,8 @@
     "objectID": "reference.html#visualization",
     "href": "reference.html#visualization",
     "title": "References",
-    "section": "",
-    "text": "The dashboards were developed using Python, Pandas, NumPy, Altair, and Vega-Lite.\nThe final interactive website uses exported Vega-Lite JSON specifications embedded through vega-embed.",
+    "section": "Visualization",
+    "text": "Visualization\nThe dashboards were developed using Python, Pandas, NumPy, Altair, and Vega-Lite.\nThe final interactive website uses exported Vega-Lite JSON specifications embedded through vega-embed.",
     "crumbs": [
       "References & Sources"
     ]
@@ -176,8 +176,8 @@
     "objectID": "reference.html#project",
     "href": "reference.html#project",
     "title": "References",
-    "section": "",
-    "text": "FareSighted — NYC Taxi Trip Analysis\nTeam FareSighted",
+    "section": "Project",
+    "text": "Project\nFareSighted — NYC Taxi Trip Analysis\nTeam FareSighted",
     "crumbs": [
       "References & Sources"
     ]

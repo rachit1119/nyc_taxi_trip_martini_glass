@@ -2,8 +2,6 @@
 title: "Limitations"
 ---
 
-# Limitations
-
 ## Sampling
 
 The original cleaned dataset contains **727,433 observations**. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.

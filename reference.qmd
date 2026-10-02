@@ -2,8 +2,6 @@
 title: "References"
 ---
 
-# References
-
 ## Dataset
 
 New York City Taxi and Limousine Commission.  
