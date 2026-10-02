@@ -86,7 +86,7 @@ Fare distributions are generally similar across boroughs, but differences emerge
 
 <div id="finding2_chart5"></div>
 
-*Figure 5: Average fare by pickup borough.*
+*Figure 4: Average fare by pickup borough.*
 
 In particular, **drop-offs in the Bronx tend to have higher fares than pickups**. This may reflect differences in trip length and the prevalence of inter-borough trips entering the Bronx.
 
@@ -94,11 +94,11 @@ The relationship between fare and trip characteristics can also be examined dire
 
 <div id="finding2_chart6"></div>
 
-*Figure 6: Relationship between fare amount and trip distance.*
+*Figure 5: Relationship between fare amount and trip distance.*
 
 <div id="finding2_chart7"></div>
 
-*Figure 7: Relationship between fare amount and trip duration.*
+*Figure 6: Relationship between fare amount and trip duration.*
 
 These views provide context for interpreting fare differences across boroughs and routes.
 
@@ -109,7 +109,7 @@ The relationship between fare amount and `trip_dissatisfaction` is relatively we
 
 <div id="finding2_chart8"></div>
 
-*Figure 8: Relationship between fare amount and trip dissatisfaction.*
+*Figure 7: Relationship between fare amount and trip dissatisfaction.*
 
 
 ### Route Patterns
