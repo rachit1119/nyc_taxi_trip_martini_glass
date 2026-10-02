@@ -1,0 +1,125 @@
+---
+title: "Finding 3: Congestion, Trip Volume, and Surcharge"
+---
+
+<script>
+
+  vegaEmbed('#finding3_chart1', './charts/finding3_view1_surcharge_distribution.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart2', './charts/finding3_view2_trip_volume_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart3', './charts/finding3_view3_surcharge_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart4', './charts/finding3_view4_volume_surcharge.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart5', './charts/finding3_view5_surcharge_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+</script>
+
+
+### Research Question
+
+**How does congestion surcharge vary with taxi activity throughout the day, and how is it related to trip conditions?**
+
+
+### Finding
+
+The analysis shows clear temporal patterns in NYC green taxi activity and congestion-related surcharges. Taxi trip volume varies substantially throughout the day, with noticeable increases during major commuting periods.
+
+Because the dataset does not contain a direct measure of traffic congestion, we use **congestion surcharge** as an indicator associated with congestion-related pricing. We examine this measure alongside trip volume and `trip_dissatisfaction` to understand how these factors relate to one another.
+
+
+### Congestion Surcharge
+
+The congestion surcharge is concentrated around its recorded surcharge values, with many trips having no surcharge and a substantial number of trips receiving the standard congestion surcharge.
+
+<div id="finding3_chart1"></div>
+
+*Figure 1: Distribution of congestion surcharge values across taxi trips.*
+
+The distribution shows that the surcharge is not continuously varying across trips. Instead, it is primarily associated with whether the surcharge is applied to a trip.
+
+
+### Temporal Patterns in Taxi Activity
+
+Trip volume follows clear commuting patterns throughout the day. Activity increases sharply during the morning commute, particularly around **7–9 AM**, and rises again during the evening commute around **5–6 PM**.
+
+<div id="finding3_chart2"></div>
+
+*Figure 2: Taxi trip volume across the hours of the day.*
+
+After midnight, trip activity decreases substantially. These patterns indicate that taxi demand is strongly associated with the time of day.
+
+
+### Congestion Surcharge Across the Day
+
+The hourly pattern of congestion surcharge provides a different perspective on these temporal changes.
+
+<div id="finding3_chart3"></div>
+
+*Figure 3: Average congestion surcharge across the hours of the day.*
+
+While taxi activity has clear morning and evening peaks, congestion surcharge remains present throughout much of the day. Relatively high surcharge levels can therefore occur outside the main commuting peaks.
+
+This suggests that overall taxi volume alone may not fully explain the observed surcharge pattern. Other factors, such as localized traffic conditions or pricing policies, may also contribute.
+
+
+### Relationship Between Trip Volume and Congestion Surcharge
+
+The relationship between hourly trip volume and average congestion surcharge can be examined directly.
+
+<div id="finding3_chart4"></div>
+
+*Figure 4: Relationship between hourly trip volume and average congestion surcharge.*
+
+The exploratory analysis shows a positive association between trip volume and congestion surcharge: periods with greater taxi activity tend to coincide with greater congestion-related surcharge activity.
+
+However, this relationship should not be interpreted as evidence that higher taxi volume directly causes higher congestion. The hourly analysis shows that surcharge can remain present even when overall trip volume is lower.
+
+
+### Congestion Surcharge and Trip Dissatisfaction
+
+Finally, we examine whether congestion surcharge is systematically associated with `trip_dissatisfaction`, which is calculated as trip duration divided by trip distance.
+
+<div id="finding3_chart5"></div>
+
+*Figure 5: Relationship between congestion surcharge and trip dissatisfaction.*
+
+The relationship does not show a clear systematic pattern. Trips with and without congestion surcharge can exhibit a wide range of trip dissatisfaction values.
+
+This suggests that **congestion surcharge and trip efficiency capture different aspects of the taxi experience**. The presence of a surcharge does not necessarily imply that a trip had a high time-per-mile value.
+
+
+### Interpretation
+
+Overall, the analysis shows that taxi activity follows strong temporal patterns, with major increases during morning and evening commuting periods.
+
+Congestion surcharge is also associated with taxi activity, but its pattern does not perfectly mirror overall trip volume. The persistence of surcharge outside the busiest periods suggests that aggregate taxi demand is only one factor associated with congestion-related pricing.
+
+At the same time, the weak relationship between congestion surcharge and `trip_dissatisfaction` indicates that the surcharge should not be treated as a direct measure of rider experience or trip efficiency.
+
+Together, these results show why **trip volume, congestion surcharge, and trip efficiency should be considered as separate but related measures** when examining NYC taxi conditions.
+
+
+### Limitations
+
+The analysis identifies **associations rather than causal relationships**. A positive relationship between trip volume and congestion surcharge does not establish that higher taxi volume directly causes higher congestion.
+
+Similarly, congestion surcharge should not be interpreted as a direct measurement of traffic congestion. It may also reflect pricing policies or other conditions associated with when and where the surcharge applies.
+
+Finally, `trip_dissatisfaction` is a proxy based on trip time per mile and does not represent a direct survey-based measure of rider satisfaction.

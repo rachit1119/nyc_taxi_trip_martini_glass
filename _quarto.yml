@@ -5,38 +5,47 @@ project:
     - charts/
 
 website:
-  #TODO: update title
-  title: "{{Project Title}}" 
-  
+  title: "FareSighted: NYC Green Taxi Trip Analysis"
+
   sidebar:
     style: "docked"
     search: false
     contents:
+
       - text: "Introduction"
         href: index.qmd
-        
-      # TODO: update this section according to your findings
+
       - section: "Findings"
         contents:
-          - text: "{{Page 1 Title}}"
+          - text: "Finding 1: Trip Efficiency Across Time, Boroughs, and Routes"
             href: finding-01.qmd
-          # - text: "{{Page 2 Title}}"
-          #   href: finding-02.qmd
-          # - text: "{{Page 3 Title}}"
-          #   href: finding-03.qmd
-          # - text: "{{Page 4 Title}}"
-          #   href: finding-04.qmd
 
-      - text: "{{Interactive Dashboard}}"
-        href: dashboard.qmd
-      - text: "{{Project Limitations}}"
+          - text: "Finding 2: Pickup and Drop-off Imbalances and Service Availability"
+            href: finding-02.qmd
+
+          - text: "Finding 3: Congestion, Trip Volume, and Surcharge"
+            href: finding-03.qmd
+
+      - section: "Interactive Dashboards"
+        contents:
+          - text: "Dashboard 1: Trip Efficiency and Satisfaction"
+            href: dashboard1.qmd
+
+          - text: "Dashboard 2: Pickup and Drop-off Imbalances"
+            href: dashboard2.qmd
+
+          - text: "Dashboard 3: Congestion and Surcharge"
+            href: dashboard3.qmd
+
+      - text: "Project Limitations"
         href: limitations.qmd
-      - text: "{{References & Sources}}"
+
+      - text: "References & Sources"
         href: reference.qmd
 
 format:
   html:
-    theme: [cosmo] 
+    theme: [cosmo]
     toc: false
     include-in-header:
       - text: |

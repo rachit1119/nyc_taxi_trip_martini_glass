@@ -2,20 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – {{Project Title}}</title>
+<title>FareSighted: NYC Green Taxi Trip Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-787e033c7b6f65c9dfccb6078e5d2d34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1bdbca75b362e6c5a8c09207907ff998.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">{{Project Title}}</a> 
+      <a href="./">FareSighted: NYC Green Taxi Trip Analysis</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
@@ -121,27 +124,62 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finding-01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Page 1 Title}}</span></a>
+ <span class="menu-text">Finding 1: Trip Efficiency Across Time, Boroughs, and Routes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finding-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding 2: Pickup and Drop-off Imbalances and Service Availability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finding-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding 3: Congestion, Trip Volume, and Surcharge</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Interactive Dashboards</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 1: Trip Efficiency and Satisfaction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 2: Pickup and Drop-off Imbalances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 3: Congestion and Surcharge</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Interactive Dashboard}}</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./limitations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Project Limitations}}</span></a>
+ <span class="menu-text">Project Limitations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{References &amp; Sources}}</span></a>
+ <span class="menu-text">References &amp; Sources</span></a>
   </div>
 </li>
     </ul>
@@ -155,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">FareSighted: NYC Green Taxi Trip Analysis</h1>
 </div>
 
 
@@ -172,76 +210,277 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO: 2–3 sentences framing the “hook.” What does the raw/unfiltered data seem to say at first glance, and why is that first impression misleading or incomplete? This sets up the tension your scrollytelling piece will resolve.</p>
-<p>TODO: 2–3 sentences describing what dataset you’re using and what the reader will be walked through (e.g.&nbsp;“this project explores X to uncover Y, moving from static charts to an interactive scroll experience that reveals Z”).</p>
-<section id="the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="the-dataset">The Dataset</h2>
-<p>TODO: 1 short paragraph. Where did this data come from, what does it capture, and over what scope/time window?</p>
-<p>TODO: List out the 2–4 attributes that matter most to your story, in the same style as below. Group them by theme if it helps (e.g.&nbsp;“Spatial attributes” vs.&nbsp;“Engineered/derived attributes”).</p>
-<p><strong>field_name_1:</strong> What it measures and why it matters to the story.</p>
-<p><strong>field_name_2:</strong> What it measures and why it matters to the story.</p>
-<p><strong>field_name_3:</strong> What it measures and why it matters to the story.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Transportation systems form the pulse of urban life, shaping how millions of people move through cities every day. In a city as dynamic as New York, taxis play an important role in connecting neighborhoods, supporting mobility, and filling gaps in the public transportation network.</p>
+<p>Our project explores the <strong>2023 NYC Green Taxi Trip dataset</strong>, which contains detailed records of green taxi trips across New York City. Green taxis, also known as Boro Taxis, primarily operate in the outer boroughs and northern Manhattan.</p>
+<p>A central question motivating our analysis is:</p>
+<blockquote class="blockquote">
+<p><strong>How do trip conditions, travel patterns, and congestion-related factors shape the experience of riding an NYC green taxi?</strong></p>
+</blockquote>
+<p>Because the dataset does not contain a direct measure of passenger satisfaction, we use several measurable characteristics as proxies for rider experience, including <strong>trip efficiency, pickup and drop-off imbalances, fares, and congestion surcharge</strong>.</p>
+<p>The project uses interactive visualizations to allow users to investigate these patterns across boroughs, hours of the day, trip distance, trip duration, and congestion conditions.</p>
+<section id="about-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-data">About the Data</h2>
+<section id="data-abstraction" class="level3">
+<h3 class="anchored" data-anchor-id="data-abstraction">Data Abstraction</h3>
+<p>The original <strong>2023 NYC Green Taxi Trip</strong> dataset contained approximately <strong>787,000 rows and 19 columns</strong>. During data exploration, we identified several issues that required cleaning and transformation before the data could be used for analysis.</p>
+<p>Two additional datasets were used during the data-wrangling process:</p>
+<ul>
+<li><code>Green_Taxi_Trip_Data_Data_Dictionary.xlsx</code> — defines the semantics and categories associated with numeric codes.</li>
+<li><code>taxi_zone_lookup.csv</code> — identifies the borough associated with each NYC taxi zone.</li>
+</ul>
+<p>The data-wrangling process involved:</p>
+<ul>
+<li>correcting data formats;</li>
+<li>mapping numeric category codes to meaningful labels;</li>
+<li>mapping taxi zones to their corresponding boroughs;</li>
+<li>creating derived variables for analysis;</li>
+<li>removing missing and invalid observations; and</li>
+<li>preparing the dataset for interactive visualization.</li>
+</ul>
+<p>The final cleaned dataset contains <strong>727,433 rows and 26 attributes</strong>.</p>
+</section>
+<section id="important-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="important-attributes">Important Attributes</h3>
+<p><strong><code>lpep_pickup_datetime</code></strong><br>
+The date and time when the taxi meter was engaged.</p>
+<p><strong><code>lpep_dropoff_datetime</code></strong><br>
+The date and time when the taxi meter was disengaged.</p>
+<p><strong><code>PULocation</code></strong><br>
+The borough where the trip began.</p>
+<p><strong><code>DOLocation</code></strong><br>
+The borough where the trip ended.</p>
+<p><strong><code>trip_distance</code></strong><br>
+The elapsed trip distance in miles reported by the taximeter.</p>
+<p><strong><code>trip_duration</code></strong><br>
+The duration of the taxi trip in minutes, calculated from pickup and drop-off timestamps.</p>
+<p><strong><code>fare_amount</code></strong><br>
+The time-and-distance fare calculated by the meter.</p>
+<p><strong><code>total_amount</code></strong><br>
+The total amount charged to the passenger, excluding cash tips.</p>
+<p><strong><code>congestion_surcharge</code></strong><br>
+The amount collected for the New York State congestion surcharge.</p>
+<p><strong><code>trip_dissatisfaction</code></strong><br>
+A derived proxy for trip inefficiency, calculated as:</p>
+<p>[ = ]</p>
+<p>A higher value indicates more minutes spent per mile.</p>
+<p><strong><code>month</code></strong><br>
+The month in which the trip occurred.</p>
+<p><strong><code>weekday</code></strong><br>
+The day of the week on which the trip occurred.</p>
+<p><strong><code>season</code></strong><br>
+The season associated with the trip.</p>
+</section>
 </section>
 <section id="dataset-information" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-information">Dataset Information</h2>
-<p><strong>Dataset:</strong> TODO — dataset name</p>
-<p><strong>Source:</strong> TODO — organization/provider</p>
-<p><strong>URL:</strong> TODO — link to raw data</p>
-<p><strong>License:</strong> TODO</p>
-<p><strong>Date Accessed:</strong> TODO</p>
-<p><strong>Time Period:</strong> TODO</p>
-<p>TODO: List out all attributes in the dataset</p>
+<p><strong>Dataset:</strong> 2023 NYC Green Taxi Trip Dataset</p>
+<p><strong>Source:</strong> New York City Taxi and Limousine Commission (TLC)</p>
+<p><strong>Platform:</strong> NYC Open Data</p>
+<p><strong>Time Period:</strong> January 1, 2023 – December 31, 2023</p>
+<p><strong>Original Dataset:</strong> Approximately 787,000 rows and 19 columns</p>
+<p><strong>Clean Dataset:</strong> 727,433 rows and 26 columns</p>
+<p><strong>Analysis Dataset:</strong> A sample of the cleaned dataset was used for exploratory visualization because of computational limitations and Altair’s handling of large datasets.</p>
+</section>
+<section id="attribute-summary" class="level2">
+<h2 class="anchored" data-anchor-id="attribute-summary">Attribute Summary</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 29%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Attribute Name</th>
-<th style="text-align: left;">Attribute Type</th>
-<th style="text-align: left;">Data Semantics</th>
-<th style="text-align: center;">Cardinality</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>TODO</strong></td>
-<td style="text-align: left;">Quantitative / Categorical (Nominal/Ordinal)</td>
-<td style="text-align: left;">TODO description</td>
-<td style="text-align: center;">TODO</td>
+<td><code>VendorID</code></td>
+<td>Categorical</td>
+<td>TPEP provider that supplied the trip record</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>TODO</strong></td>
-<td style="text-align: left;">Quantitative / Categorical (Nominal/Ordinal)</td>
-<td style="text-align: left;">TODO description</td>
-<td style="text-align: center;">TODO</td>
+<td><code>lpep_pickup_datetime</code></td>
+<td>Temporal</td>
+<td>Date and time of pickup</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>TODO</strong></td>
-<td style="text-align: left;">Quantitative / Categorical (Nominal/Ordinal)</td>
-<td style="text-align: left;">TODO description</td>
-<td style="text-align: center;">TODO</td>
+<td><code>lpep_dropoff_datetime</code></td>
+<td>Temporal</td>
+<td>Date and time of drop-off</td>
+</tr>
+<tr class="even">
+<td><code>store_and_fwd_flag</code></td>
+<td>Categorical</td>
+<td>Whether the trip record was stored before transmission</td>
+</tr>
+<tr class="odd">
+<td><code>RatecodeID</code></td>
+<td>Categorical</td>
+<td>Final rate code applied to the trip</td>
+</tr>
+<tr class="even">
+<td><code>PULocationID</code></td>
+<td>Categorical</td>
+<td>Taxi zone where the trip began</td>
+</tr>
+<tr class="odd">
+<td><code>DOLocationID</code></td>
+<td>Categorical</td>
+<td>Taxi zone where the trip ended</td>
+</tr>
+<tr class="even">
+<td><code>passenger_count</code></td>
+<td>Quantitative</td>
+<td>Number of passengers</td>
+</tr>
+<tr class="odd">
+<td><code>trip_distance</code></td>
+<td>Quantitative</td>
+<td>Trip distance in miles</td>
+</tr>
+<tr class="even">
+<td><code>fare_amount</code></td>
+<td>Quantitative</td>
+<td>Metered fare</td>
+</tr>
+<tr class="odd">
+<td><code>extra</code></td>
+<td>Quantitative</td>
+<td>Miscellaneous extras and surcharges</td>
+</tr>
+<tr class="even">
+<td><code>mta_tax</code></td>
+<td>Quantitative</td>
+<td>MTA tax</td>
+</tr>
+<tr class="odd">
+<td><code>tip_amount</code></td>
+<td>Quantitative</td>
+<td>Credit-card tip</td>
+</tr>
+<tr class="even">
+<td><code>tolls_amount</code></td>
+<td>Quantitative</td>
+<td>Total toll amount</td>
+</tr>
+<tr class="odd">
+<td><code>improvement_surcharge</code></td>
+<td>Quantitative</td>
+<td>Improvement surcharge</td>
+</tr>
+<tr class="even">
+<td><code>total_amount</code></td>
+<td>Quantitative</td>
+<td>Total passenger charge excluding cash tips</td>
+</tr>
+<tr class="odd">
+<td><code>payment_type</code></td>
+<td>Categorical</td>
+<td>Payment method</td>
+</tr>
+<tr class="even">
+<td><code>trip_type</code></td>
+<td>Categorical</td>
+<td>Street-hail or dispatch</td>
+</tr>
+<tr class="odd">
+<td><code>congestion_surcharge</code></td>
+<td>Quantitative</td>
+<td>NYS congestion surcharge</td>
+</tr>
+<tr class="even">
+<td><code>PULocation</code></td>
+<td>Categorical</td>
+<td>Pickup borough</td>
+</tr>
+<tr class="odd">
+<td><code>DOLocation</code></td>
+<td>Categorical</td>
+<td>Drop-off borough</td>
+</tr>
+<tr class="even">
+<td><code>trip_duration</code></td>
+<td>Quantitative</td>
+<td>Duration of the trip in minutes</td>
+</tr>
+<tr class="odd">
+<td><code>trip_dissatisfaction</code></td>
+<td>Quantitative</td>
+<td>Duration divided by distance</td>
+</tr>
+<tr class="even">
+<td><code>month</code></td>
+<td>Ordinal</td>
+<td>Month of the trip</td>
+</tr>
+<tr class="odd">
+<td><code>weekday</code></td>
+<td>Ordinal</td>
+<td>Day of the week</td>
+</tr>
+<tr class="even">
+<td><code>season</code></td>
+<td>Categorical</td>
+<td>Season of the trip</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="impact-and-utility" class="level2">
-<h2 class="anchored" data-anchor-id="impact-and-utility">Impact and Utility</h2>
-<p>TODO: 1–2 sentences on who benefits from this analysis and why (e.g.&nbsp;planners, analysts, decision-makers in your domain).</p>
-<p>To guide the reader through the data, this story addresses the following questions:</p>
-<section id="todo-research-question-1" class="level3">
-<h3 class="anchored" data-anchor-id="todo-research-question-1">TODO: Research Question 1</h3>
-<p>TODO: 2–3 sentences previewing what section 1 (chart1) will reveal.</p>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<p>The data was cleaned and transformed before visualization.</p>
+<p>Several derived variables were particularly important to the analysis. <code>trip_duration</code> was calculated from the pickup and drop-off timestamps, while <code>trip_dissatisfaction</code> was derived from trip duration and distance.</p>
+<p>For the interactive views, the dataset was also aggregated by borough, hour, and trip characteristics where necessary. These transformations allowed the visualizations to remain responsive while preserving the patterns required for analysis.</p>
+<p>Because the complete dataset was large, a sample of the cleaned data was used for the exploratory visualizations.</p>
 </section>
-<section id="todo-research-question-2" class="level3">
-<h3 class="anchored" data-anchor-id="todo-research-question-2">TODO: Research Question 2</h3>
-<p>TODO: 2–3 sentences previewing what section 2 (chart2) will reveal.</p>
+</section>
+<section id="our-analytical-story" class="level1">
+<h1>Our Analytical Story</h1>
+<p>The analysis focuses on three connected aspects of the green taxi experience.</p>
+<section id="finding-1-trip-efficiency-and-satisfaction" class="level2">
+<h2 class="anchored" data-anchor-id="finding-1-trip-efficiency-and-satisfaction">Finding 1 — Trip Efficiency and Satisfaction</h2>
+<p><strong>How do trip durations and satisfaction vary across boroughs and time blocks?</strong></p>
+<p>The first finding investigates whether trips become longer or less efficient during particular times of day and whether these patterns differ across boroughs.</p>
+<p>The analysis connects <strong>trip duration, trip distance, and trip dissatisfaction</strong> to identify trips that take disproportionately long relative to the distance travelled.</p>
+</section>
+<section id="finding-2-pickup-and-drop-off-imbalances" class="level2">
+<h2 class="anchored" data-anchor-id="finding-2-pickup-and-drop-off-imbalances">Finding 2 — Pickup and Drop-off Imbalances</h2>
+<p><strong>How do pickup and drop-off patterns reflect supply-demand mismatches and potential wait time expectations, and how is fare related to such imbalance?</strong></p>
+<p>The second finding examines differences between pickup and drop-off volumes across boroughs and hours.</p>
+<p>Large differences between pickups and drop-offs can provide an indication of potential supply-demand imbalance. The visualization also connects these patterns to average fares.</p>
+</section>
+<section id="finding-3-congestion-and-surcharge" class="level2">
+<h2 class="anchored" data-anchor-id="finding-3-congestion-and-surcharge">Finding 3 — Congestion and Surcharge</h2>
+<p><strong>How does congestion surcharge reflect congestion on routes?</strong></p>
+<p>The final finding investigates the relationship between trip volume and congestion surcharge throughout the day.</p>
+<p>By comparing hourly trip volumes with average congestion surcharge, we can examine whether periods of greater taxi activity coincide with higher congestion-related charges.</p>
+</section>
+</section>
+<section id="general-takeaways" class="level1">
+<h1>General Takeaways</h1>
+<p>The dashboards allow users to investigate:</p>
+<ul>
+<li>how trip efficiency varies across boroughs and time blocks;</li>
+<li>where pickup and drop-off imbalances occur;</li>
+<li>how fares change alongside pickup and drop-off patterns;</li>
+<li>how congestion surcharge varies throughout the day;</li>
+<li>whether trip volume and congestion surcharge are related; and</li>
+<li>how these factors can be used as proxies for the rider experience.</li>
+</ul>
+<p>The goal is not to claim that these measures directly represent passenger satisfaction. Instead, they provide observable indicators that allow us to investigate aspects of efficiency, availability, pricing, and congestion.</p>
+</section>
+<section id="navigating-the-story" class="level1">
+<h1>Navigating the Story</h1>
+<p>Use the <strong>findings</strong> to understand the analytical questions and the reasoning behind each visualization.</p>
+<p>Use the corresponding <strong>dashboards</strong> to interact directly with the visualizations and explore the data yourself.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

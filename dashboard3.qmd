@@ -1,0 +1,38 @@
+---
+title: "Dashboard 3: Trip Volume and Congestion"
+---
+
+<script>
+  vegaEmbed('#dashboard3', './charts/dashboard3.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+</script>
+
+<div id="dashboard3"></div>
+
+*Dashboard 3: Hourly trip volume and average congestion surcharge, with an interactive analysis of their relationship.*
+
+### Significance
+
+This dashboard investigates how congestion surcharge varies throughout the day and how it relates to taxi trip volume.
+
+The hourly visualization compares pickup volume, drop-off volume, and average congestion surcharge. This makes it possible to identify periods of high taxi activity and determine whether congestion surcharge follows a similar temporal pattern.
+
+The accompanying scatterplot directly compares hourly trip volume with average congestion surcharge, making the relationship between the two variables easier to examine.
+
+The analysis shows that trip volumes increase during major commuting periods, while congestion surcharge remains relatively high throughout much of the day. This suggests that aggregate taxi demand alone may not fully explain congestion-related pricing.
+
+### How to Use the Dashboard
+
+Examine the hourly lines to compare **pickup volume, drop-off volume, and average congestion surcharge** throughout the day.
+
+Use the interactive **legend** to focus on pickup or drop-off patterns and reduce visual clutter.
+
+Hover over points to inspect individual hours and connect observations between the hourly visualization and scatterplot.
+
+Use the **brush interaction** on the hourly chart to select a range of hours. The corresponding observations will be highlighted in the scatterplot.
+
+Use the **regression-line checkbox** to display the overall relationship between trip volume and average congestion surcharge.
+
+Compare peak commuting periods with lower-volume hours to determine whether congestion surcharge follows the same pattern as taxi demand.

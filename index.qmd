@@ -1,56 +1,192 @@
 ---
-title: "Introduction"
+title: "FareSighted: NYC Green Taxi Trip Analysis"
 ---
 
-TODO: 2–3 sentences framing the "hook." What does the raw/unfiltered data seem to say at first glance, and why is that first impression misleading or incomplete? This sets up the tension your scrollytelling piece will resolve.
+# Introduction
 
-TODO: 2–3 sentences describing what dataset you're using and what the reader will be walked through (e.g. "this project explores X to uncover Y, moving from static charts to an interactive scroll experience that reveals Z").
+Transportation systems form the pulse of urban life, shaping how millions of people move through cities every day. In a city as dynamic as New York, taxis play an important role in connecting neighborhoods, supporting mobility, and filling gaps in the public transportation network.
 
-## The Dataset
+Our project explores the **2023 NYC Green Taxi Trip dataset**, which contains detailed records of green taxi trips across New York City. Green taxis, also known as Boro Taxis, primarily operate in the outer boroughs and northern Manhattan.
 
-TODO: 1 short paragraph. Where did this data come from, what does it capture, and over what scope/time window?
+A central question motivating our analysis is:
 
-TODO: List out the 2–4 attributes that matter most to your story, in the same style as below. Group them by theme if it helps (e.g. "Spatial attributes" vs. "Engineered/derived attributes").
+> **How do trip conditions, travel patterns, and congestion-related factors shape the experience of riding an NYC green taxi?**
 
-**field_name_1:** What it measures and why it matters to the story.
+Because the dataset does not contain a direct measure of passenger satisfaction, we use several measurable characteristics as proxies for rider experience, including **trip efficiency, pickup and drop-off imbalances, fares, and congestion surcharge**.
 
-**field_name_2:** What it measures and why it matters to the story.
+The project uses interactive visualizations to allow users to investigate these patterns across boroughs, hours of the day, trip distance, trip duration, and congestion conditions.
 
-**field_name_3:** What it measures and why it matters to the story.
+## About the Data
+
+### Data Abstraction
+
+The original **2023 NYC Green Taxi Trip** dataset contained approximately **787,000 rows and 19 columns**. During data exploration, we identified several issues that required cleaning and transformation before the data could be used for analysis.
+
+Two additional datasets were used during the data-wrangling process:
+
+- `Green_Taxi_Trip_Data_Data_Dictionary.xlsx` — defines the semantics and categories associated with numeric codes.
+- `taxi_zone_lookup.csv` — identifies the borough associated with each NYC taxi zone.
+
+The data-wrangling process involved:
+
+- correcting data formats;
+- mapping numeric category codes to meaningful labels;
+- mapping taxi zones to their corresponding boroughs;
+- creating derived variables for analysis;
+- removing missing and invalid observations; and
+- preparing the dataset for interactive visualization.
+
+The final cleaned dataset contains **727,433 rows and 26 attributes**.
+
+### Important Attributes
+
+**`lpep_pickup_datetime`**  
+The date and time when the taxi meter was engaged.
+
+**`lpep_dropoff_datetime`**  
+The date and time when the taxi meter was disengaged.
+
+**`PULocation`**  
+The borough where the trip began.
+
+**`DOLocation`**  
+The borough where the trip ended.
+
+**`trip_distance`**  
+The elapsed trip distance in miles reported by the taximeter.
+
+**`trip_duration`**  
+The duration of the taxi trip in minutes, calculated from pickup and drop-off timestamps.
+
+**`fare_amount`**  
+The time-and-distance fare calculated by the meter.
+
+**`total_amount`**  
+The total amount charged to the passenger, excluding cash tips.
+
+**`congestion_surcharge`**  
+The amount collected for the New York State congestion surcharge.
+
+**`trip_dissatisfaction`**  
+A derived proxy for trip inefficiency, calculated as:
+
+\[
+\text{trip dissatisfaction}
+=
+\frac{\text{trip duration}}{\text{trip distance}}
+\]
+
+A higher value indicates more minutes spent per mile.
+
+**`month`**  
+The month in which the trip occurred.
+
+**`weekday`**  
+The day of the week on which the trip occurred.
+
+**`season`**  
+The season associated with the trip.
 
 ## Dataset Information
 
-**Dataset:** TODO — dataset name
+**Dataset:** 2023 NYC Green Taxi Trip Dataset
 
-**Source:** TODO — organization/provider
+**Source:** New York City Taxi and Limousine Commission (TLC)
 
-**URL:** TODO — link to raw data
+**Platform:** NYC Open Data
 
-**License:** TODO
+**Time Period:** January 1, 2023 – December 31, 2023
 
-**Date Accessed:** TODO
+**Original Dataset:** Approximately 787,000 rows and 19 columns
 
-**Time Period:** TODO
+**Clean Dataset:** 727,433 rows and 26 columns
 
-TODO: List out all attributes in the dataset
+**Analysis Dataset:** A sample of the cleaned dataset was used for exploratory visualization because of computational limitations and Altair's handling of large datasets.
 
-| Attribute Name | Attribute Type | Data Semantics | Cardinality |
-| :--- | :--- | :--- | :---: |
-| **TODO** | Quantitative / Categorical (Nominal/Ordinal) | TODO description | TODO |
-| **TODO** | Quantitative / Categorical (Nominal/Ordinal) | TODO description | TODO |
-| **TODO** | Quantitative / Categorical (Nominal/Ordinal) | TODO description | TODO |
+## Attribute Summary
 
+| Attribute | Type | Description |
+|---|---|---|
+| `VendorID` | Categorical | TPEP provider that supplied the trip record |
+| `lpep_pickup_datetime` | Temporal | Date and time of pickup |
+| `lpep_dropoff_datetime` | Temporal | Date and time of drop-off |
+| `store_and_fwd_flag` | Categorical | Whether the trip record was stored before transmission |
+| `RatecodeID` | Categorical | Final rate code applied to the trip |
+| `PULocationID` | Categorical | Taxi zone where the trip began |
+| `DOLocationID` | Categorical | Taxi zone where the trip ended |
+| `passenger_count` | Quantitative | Number of passengers |
+| `trip_distance` | Quantitative | Trip distance in miles |
+| `fare_amount` | Quantitative | Metered fare |
+| `extra` | Quantitative | Miscellaneous extras and surcharges |
+| `mta_tax` | Quantitative | MTA tax |
+| `tip_amount` | Quantitative | Credit-card tip |
+| `tolls_amount` | Quantitative | Total toll amount |
+| `improvement_surcharge` | Quantitative | Improvement surcharge |
+| `total_amount` | Quantitative | Total passenger charge excluding cash tips |
+| `payment_type` | Categorical | Payment method |
+| `trip_type` | Categorical | Street-hail or dispatch |
+| `congestion_surcharge` | Quantitative | NYS congestion surcharge |
+| `PULocation` | Categorical | Pickup borough |
+| `DOLocation` | Categorical | Drop-off borough |
+| `trip_duration` | Quantitative | Duration of the trip in minutes |
+| `trip_dissatisfaction` | Quantitative | Duration divided by distance |
+| `month` | Ordinal | Month of the trip |
+| `weekday` | Ordinal | Day of the week |
+| `season` | Categorical | Season of the trip |
 
-## Impact and Utility
+## Data Preparation
 
-TODO: 1–2 sentences on who benefits from this analysis and why (e.g. planners, analysts, decision-makers in your domain).
+The data was cleaned and transformed before visualization.
 
-To guide the reader through the data, this story addresses the following questions:
+Several derived variables were particularly important to the analysis. `trip_duration` was calculated from the pickup and drop-off timestamps, while `trip_dissatisfaction` was derived from trip duration and distance.
 
-### TODO: Research Question 1
+For the interactive views, the dataset was also aggregated by borough, hour, and trip characteristics where necessary. These transformations allowed the visualizations to remain responsive while preserving the patterns required for analysis.
 
-TODO: 2–3 sentences previewing what section 1 (chart1) will reveal.
+Because the complete dataset was large, a sample of the cleaned data was used for the exploratory visualizations.
 
-### TODO: Research Question 2
+# Our Analytical Story
 
-TODO: 2–3 sentences previewing what section 2 (chart2) will reveal.
+The analysis focuses on three connected aspects of the green taxi experience.
+
+## Finding 1 — Trip Efficiency and Satisfaction
+
+**How do trip durations and satisfaction vary across boroughs and time blocks?**
+
+The first finding investigates whether trips become longer or less efficient during particular times of day and whether these patterns differ across boroughs.
+
+The analysis connects **trip duration, trip distance, and trip dissatisfaction** to identify trips that take disproportionately long relative to the distance travelled.
+
+## Finding 2 — Pickup and Drop-off Imbalances
+
+**How do pickup and drop-off patterns reflect supply-demand mismatches and potential wait time expectations, and how is fare related to such imbalance?**
+
+The second finding examines differences between pickup and drop-off volumes across boroughs and hours.
+
+Large differences between pickups and drop-offs can provide an indication of potential supply-demand imbalance. The visualization also connects these patterns to average fares.
+
+## Finding 3 — Congestion and Surcharge
+
+**How does congestion surcharge reflect congestion on routes?**
+
+The final finding investigates the relationship between trip volume and congestion surcharge throughout the day.
+
+By comparing hourly trip volumes with average congestion surcharge, we can examine whether periods of greater taxi activity coincide with higher congestion-related charges.
+
+# General Takeaways
+
+The dashboards allow users to investigate:
+
+- how trip efficiency varies across boroughs and time blocks;
+- where pickup and drop-off imbalances occur;
+- how fares change alongside pickup and drop-off patterns;
+- how congestion surcharge varies throughout the day;
+- whether trip volume and congestion surcharge are related; and
+- how these factors can be used as proxies for the rider experience.
+
+The goal is not to claim that these measures directly represent passenger satisfaction. Instead, they provide observable indicators that allow us to investigate aspects of efficiency, availability, pricing, and congestion.
+
+# Navigating the Story
+
+Use the **findings** to understand the analytical questions and the reasoning behind each visualization.
+
+Use the corresponding **dashboards** to interact directly with the visualizations and explore the data yourself.

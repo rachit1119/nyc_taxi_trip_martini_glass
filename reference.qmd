@@ -1,3 +1,36 @@
 ---
 title: "References"
 ---
+
+# References
+
+## Dataset
+
+New York City Taxi and Limousine Commission.  
+**2023 Green Taxi Trip Data.** NYC Open Data.
+
+https://data.cityofnewyork.us/Transportation/2023-Green-Taxi-Trip-Data/2d59-ymk4
+
+## Data Dictionary
+
+New York City Taxi and Limousine Commission.
+
+**Green Taxi Trip Data Dictionary.**
+
+## Taxi Zone Information
+
+New York City Taxi and Limousine Commission.
+
+**Taxi Zone Lookup Table.**
+
+## Visualization
+
+The dashboards were developed using **Python, Pandas, NumPy, Altair, and Vega-Lite**.
+
+The final interactive website uses exported Vega-Lite JSON specifications embedded through `vega-embed`.
+
+## Project
+
+**FareSighted — NYC Taxi Trip Analysis**
+
+Team FareSighted

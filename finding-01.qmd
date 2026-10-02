@@ -1,27 +1,132 @@
 ---
-title: "TODO: Finding Title"
+title: "Finding 1: Trip Efficiency Across Time, Boroughs, and Routes"
 ---
 
-<!-- TODO: Copy and Paste this template for other findings -->
-
 <script>
-  // TODO: Update the JSON file paths to match your exported Altair/Vega-Lite chart specifications
-  vegaEmbed('#chart1', './charts/placeholder_chart.json', {
+
+  vegaEmbed('#finding1_chart1', './charts/finding1_view1_trip_volume.json', {
     renderer: 'svg',
-    actions: false,
+    actions: false
   })
 
-  vegaEmbed('#chart2', './charts/scatter_placeholder.json', {
+  vegaEmbed('#finding1_chart2', './charts/finding1_view2_trip_duration.json', {
     renderer: 'svg',
-    actions: false,
+    actions: false
   })
+
+  vegaEmbed('#finding1_chart3', './charts/finding1_view3_trip_dissatisfaction_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart4', './charts/finding1_view4_dissatisfaction_borough_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart5', './charts/finding1_view5_distance_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart6', './charts/finding1_view6_duration_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart7', './charts/finding1_view7_borough_route_heatmap.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart8', './charts/finding1_view8_route_duration_distance.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
 </script>
 
 
-<div id="chart1"></div>
-*Figure 1: TODO: Update the figure caption accordingly*
+### Research Question
 
- TODO: Explain the significance of the plot
+**How does trip efficiency vary across time, boroughs, and routes, and where do riders experience the most inefficient trips?**
 
-<div id="chart2"></div>
-*Figure 2: TODO: Update the figure caption accordingly*
+
+### Finding
+
+Our exploratory analysis shows that trip efficiency varies substantially across NYC green taxi trips. Because trip duration alone does not account for the distance travelled, we use **trip time per mile** as a proxy for trip efficiency and potential rider dissatisfaction.
+
+Most taxi trips are relatively short, with the majority concentrated within the 0–5 mile range. Trip duration is strongly right-skewed: the average trip lasts approximately 18 minutes, while a small number of extreme trips last several hours. These outliers demonstrate why raw trip duration alone can be misleading when evaluating the efficiency of a trip.
+
+The derived `trip_dissatisfaction` metric, calculated as trip duration divided by trip distance, provides a more informative measure of efficiency. The average is approximately 11 minutes per mile, while the median is approximately 6 minutes per mile. Extreme observations, including unusually long trips over very short distances, substantially increase the mean.
+
+<div id="finding1_chart1"></div>
+
+*Figure 1: Trip volume across the 24 hours of the day.*
+
+<div id="finding1_chart2"></div>
+
+*Figure 2: Average trip duration across the 24 hours of the day.*
+
+
+### Temporal Patterns
+
+Trip volume increases sharply during the morning commute, particularly between **7–9 AM**, and rises again during the evening rush hour around **5 PM**.
+
+Although average trip durations remain relatively stable throughout much of the day, dissatisfaction varies across boroughs and hours.
+
+<div id="finding1_chart3"></div>
+
+*Figure 3: Average trip dissatisfaction, measured as trip time per mile, across hours of the day.*
+
+Manhattan and the Bronx exhibit higher levels of average dissatisfaction overall, while Staten Island has the lowest average dissatisfaction at approximately 3 minutes per mile. The time of peak dissatisfaction also differs between boroughs, suggesting that inefficiency is influenced by localized traffic and travel conditions.
+
+<div id="finding1_chart4"></div>
+
+*Figure 4: Average trip dissatisfaction across pickup boroughs and hours of the day.*
+
+
+### Relationship Between Distance, Duration, and Efficiency
+
+Trip distance and trip duration provide important context for interpreting trip dissatisfaction. A longer trip is not necessarily inefficient if the additional travel time is proportional to the distance travelled.
+
+<div id="finding1_chart5"></div>
+
+*Figure 5: Relationship between trip distance and trip dissatisfaction.*
+
+<div id="finding1_chart6"></div>
+
+*Figure 6: Relationship between trip duration and trip dissatisfaction.*
+
+These views show that dissatisfaction is not determined simply by trip distance or trip duration. Short trips can have relatively high time-per-mile values, while long trips can have relatively low values.
+
+
+### Route Patterns
+
+Route-level analysis highlights several corridors with particularly long travel times. Brooklyn–Bronx, Queens–Staten Island, and Manhattan–EWR contain some of the longest-duration trips. However, not all high-duration routes are also the longest-distance routes.
+
+In particular, the **Brooklyn–Bronx corridor** has relatively high trip duration without being among the longest-distance routes. This indicates lower trip efficiency and suggests that traffic or route-specific conditions may contribute to longer travel times.
+
+<div id="finding1_chart7"></div>
+
+*Figure 7: Average trip dissatisfaction across pickup and drop-off borough combinations.*
+
+<div id="finding1_chart8"></div>
+
+*Figure 8: Average trip duration and distance across borough-to-borough routes, with point size representing trip volume.*
+
+Other routes, including Bronx–Brooklyn and Queens–Brooklyn, also show relatively high levels of dissatisfaction.
+
+
+### Interpretation
+
+Overall, the analysis suggests that trip dissatisfaction is not determined simply by how long a trip lasts or how far it travels. Instead, the relationship between **time and distance** provides a more useful way to identify inefficient trips.
+
+Trips that require substantially more time than expected for their distance may indicate congestion, route-specific inefficiencies, or other travel conditions that can negatively affect the rider experience.
+
+
+### Limitations
+
+`trip_dissatisfaction` is a **proxy for rider satisfaction**, rather than a direct measurement of satisfaction. The dataset does not contain an explicit rider satisfaction score.
+
+Extreme trip durations and very short distances can also produce unusually large values, so these observations should be interpreted carefully.

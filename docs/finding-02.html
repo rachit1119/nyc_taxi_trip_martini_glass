@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Limitations – FareSighted: NYC Green Taxi Trip Analysis</title>
+<title>Finding 2: Pickup and Drop-off Imbalances and Service Availability – FareSighted: NYC Green Taxi Trip Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./limitations.html">Project Limitations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-02.html">Finding 2: Pickup and Drop-off Imbalances and Service Availability</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./finding-02.html" class="sidebar-item-text sidebar-link">
+  <a href="./finding-02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Finding 2: Pickup and Drop-off Imbalances and Service Availability</span></a>
   </div>
 </li>
@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limitations.html" class="sidebar-item-text sidebar-link active">
+  <a href="./limitations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Limitations</span></a>
   </div>
 </li>
@@ -191,9 +191,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-02.html">Finding 2: Pickup and Drop-off Imbalances and Service Availability</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Limitations</h1>
+<h1 class="title">Finding 2: Pickup and Drop-off Imbalances and Service Availability</h1>
 </div>
 
 
@@ -210,57 +210,129 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="limitations" class="level1">
-<h1>Limitations</h1>
-<section id="sampling" class="level2">
-<h2 class="anchored" data-anchor-id="sampling">Sampling</h2>
-<p>The original cleaned dataset contains <strong>727,433 observations</strong>. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.</p>
-<p>As a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.</p>
+<script>
+
+  vegaEmbed('#finding2_chart1', './charts/finding2_view1_pickup_volume.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart2', './charts/finding2_view2_dropoff_volume.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart3', './charts/finding2_view3_pickup_dropoff_volume.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart4', './charts/finding2_view4_pickup_dropoff_imbalance.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart5', './charts/finding2_view5_average_fare_borough.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart6', './charts/finding2_view6_fare_distance.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart7', './charts/finding2_view7_fare_duration.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart8', './charts/finding2_view8_fare_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+</script>
+<section id="research-question" class="level3">
+<h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
+<p><strong>How do pickup and drop-off patterns reveal potential supply-demand imbalances, and how are these imbalances associated with fares?</strong></p>
 </section>
-<section id="proxy-for-satisfaction" class="level2">
-<h2 class="anchored" data-anchor-id="proxy-for-satisfaction">Proxy for Satisfaction</h2>
-<p>The dataset does not contain a direct measure of passenger satisfaction.</p>
-<p>Instead, we use:</p>
-<ul>
-<li>trip dissatisfaction;</li>
-<li>pickup and drop-off imbalance;</li>
-<li>fare;</li>
-<li>trip volume; and</li>
-<li>congestion surcharge</li>
-</ul>
-<p>as observable proxies for aspects of the rider experience.</p>
-<p>These variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.</p>
+<section id="finding" class="level3">
+<h3 class="anchored" data-anchor-id="finding">Finding</h3>
+<p>Pickup and drop-off patterns reveal important differences in taxi activity across NYC boroughs. While pickup and drop-off volumes are generally relatively symmetric, some boroughs show noticeable imbalances that may indicate uneven taxi availability.</p>
+<p>The <strong>Bronx</strong> stands out because its drop-off volume is substantially higher than its pickup volume. This suggests that taxis frequently enter the Bronx with passengers but may have fewer passengers available for outbound trips.</p>
+<p>Although the dataset does not directly measure rider wait times, this imbalance can be interpreted as a <strong>proxy for potential service availability</strong>. If more taxis are entering an area than leaving with passengers, fewer taxis may be immediately available for new riders in that area.</p>
+<div id="finding2_chart3">
+
+</div>
+<p><em>Figure 1: Overall pickup and drop-off volumes across NYC boroughs.</em></p>
 </section>
-<section id="visual-complexity" class="level2">
-<h2 class="anchored" data-anchor-id="visual-complexity">Visual Complexity</h2>
-<p>Some of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.</p>
-<p>In particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.</p>
+<section id="temporal-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-patterns">Temporal Patterns</h3>
+<p>Pickup and drop-off activity generally follows similar hourly patterns. Taxi activity increases substantially during the morning and evening commuting periods, while overall activity decreases after midnight.</p>
+<div id="finding2_chart1">
+
+</div>
+<p><em>Figure 2: Pickup volume by borough and hour.</em></p>
+<div id="finding2_chart2">
+
+</div>
+<p><em>Figure 3: Drop-off volume by borough and hour.</em></p>
+<p>Comparing pickup and drop-off volumes by hour helps identify periods when the balance between incoming and outgoing taxi trips changes. These differences provide additional context for understanding potential supply-demand mismatches.</p>
 </section>
-<section id="individual-trip-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="individual-trip-visualization">Individual Trip Visualization</h2>
-<p>The trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.</p>
+<section id="pickup-and-drop-off-imbalance" class="level3">
+<h3 class="anchored" data-anchor-id="pickup-and-drop-off-imbalance">Pickup and Drop-off Imbalance</h3>
+<p>The overall difference between pickup and drop-off activity highlights the boroughs where taxi flows are least balanced.</p>
+<div id="finding2_chart4">
+
+</div>
+<p><em>Figure 4: Difference between pickup and drop-off volumes by borough.</em></p>
+<p>The Bronx shows the most noticeable imbalance, with substantially more drop-offs than pickups. This pattern is consistent with taxis carrying passengers into the borough without an equivalent number of passenger-carrying trips originating there.</p>
 </section>
-<section id="aggregation" class="level2">
-<h2 class="anchored" data-anchor-id="aggregation">Aggregation</h2>
-<p>Several views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.</p>
-<p>Aggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.</p>
+<section id="fare-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="fare-patterns">Fare Patterns</h3>
+<p>Fare distributions are generally similar across boroughs, but differences emerge when comparing trips by pickup and drop-off location.</p>
+<div id="finding2_chart5">
+
+</div>
+<p><em>Figure 5: Average fare by pickup borough.</em></p>
+<p>In particular, <strong>drop-offs in the Bronx tend to have higher fares than pickups</strong>. This may reflect differences in trip length and the prevalence of inter-borough trips entering the Bronx.</p>
+<p>The relationship between fare and trip characteristics can also be examined directly.</p>
+<div id="finding2_chart6">
+
+</div>
+<p><em>Figure 6: Relationship between fare amount and trip distance.</em></p>
+<div id="finding2_chart7">
+
+</div>
+<p><em>Figure 7: Relationship between fare amount and trip duration.</em></p>
+<p>These views provide context for interpreting fare differences across boroughs and routes.</p>
 </section>
-<section id="association-vs.-causation" class="level2">
-<h2 class="anchored" data-anchor-id="association-vs.-causation">Association vs.&nbsp;Causation</h2>
-<p>The visualizations identify relationships and patterns in the data, but they do not establish causal relationships.</p>
-<p>For example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.</p>
+<section id="fare-and-trip-dissatisfaction" class="level3">
+<h3 class="anchored" data-anchor-id="fare-and-trip-dissatisfaction">Fare and Trip Dissatisfaction</h3>
+<p>The relationship between fare amount and <code>trip_dissatisfaction</code> is relatively weak. High and low fares occur across a wide range of dissatisfaction values.</p>
+<div id="finding2_chart8">
+
+</div>
+<p><em>Figure 8: Relationship between fare amount and trip dissatisfaction.</em></p>
 </section>
-<section id="data-quality" class="level2">
-<h2 class="anchored" data-anchor-id="data-quality">Data Quality</h2>
-<p>The original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.</p>
-<p>Although the data-wrangling process attempted to address these issues, some unusual observations may remain.</p>
+<section id="route-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="route-patterns">Route Patterns</h3>
+<p>The most frequent routes are concentrated within Manhattan, Queens, and Brooklyn, while several major cross-borough routes also account for substantial taxi activity.</p>
+<p>Routes such as Brooklyn–Manhattan, Manhattan–Bronx, and Manhattan–Queens are among the prominent cross-borough connections. These high-volume routes overlap with areas where inefficient trips are also observed.</p>
+<p>This suggests that frequently travelled areas can simultaneously experience high taxi demand and inefficient travel conditions.</p>
 </section>
-<section id="geographic-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="geographic-interpretation">Geographic Interpretation</h2>
-<p>Taxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.</p>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>The pickup and drop-off imbalance provides evidence of <strong>uneven taxi distribution across NYC</strong>. The Bronx, in particular, receives substantially more taxi trips than it generates, suggesting that taxi availability may differ depending on trip direction.</p>
+<p>These patterns do not directly establish rider wait times or prove that fare differences are caused by supply-demand imbalance. Instead, they identify areas where pickup/drop-off patterns and fare characteristics provide useful indicators of differences in the taxi experience.</p>
+</section>
+<section id="limitations" class="level3">
+<h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
+<p>Pickup and drop-off volumes are used as an indirect measure of potential supply-demand imbalance. The dataset does not contain direct measurements of taxi availability, passenger wait time, or unmet demand.</p>
+<p>Therefore, the observed imbalances should be interpreted as <strong>proxies rather than direct measurements of rider waiting time or satisfaction</strong>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

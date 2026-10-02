@@ -1,0 +1,34 @@
+---
+title: "Dashboard 1: Trip Efficiency Across Time and Boroughs"
+---
+
+<script>
+  vegaEmbed('#dashboard1', './charts/dashboard1.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+</script>
+
+<div id="dashboard1"></div>
+
+*Dashboard 1: Trip duration, distance, and trip dissatisfaction across boroughs and time blocks.*
+
+### Significance
+
+This dashboard explores how trip efficiency varies across boroughs and different periods of the day. Trip dissatisfaction is represented using trip duration per mile, allowing unusually slow trips to be identified relative to the distance travelled.
+
+The dashboard connects trip duration with trip distance and dissatisfaction. This helps determine whether inefficient trips are caused primarily by long travel distances or by trips taking unusually long relative to their distance.
+
+By examining these patterns across boroughs and time blocks, the dashboard highlights when and where riders may experience inefficient taxi trips.
+
+### How to Use the Dashboard
+
+Use the **borough dropdown** to select the pickup borough you want to investigate.
+
+Use the **time-block selector** to highlight trips occurring during different periods of the day.
+
+Hover over individual trips in the trip-duration visualization to identify the corresponding trip in the distance and dissatisfaction scatterplot.
+
+You can also **brush over points in the scatterplot** to highlight the corresponding trips in the trip-duration visualization.
+
+Compare trips with high dissatisfaction values against their distance and duration to identify unusually inefficient trips.

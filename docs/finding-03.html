@@ -2,20 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dashboard – {{Project Title}}</title>
+<title>Finding 3: Congestion, Trip Volume, and Surcharge – FareSighted: NYC Green Taxi Trip Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-787e033c7b6f65c9dfccb6078e5d2d34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1bdbca75b362e6c5a8c09207907ff998.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -86,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dashboard.html">{{Interactive Dashboard}}</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-03.html">Finding 3: Congestion, Trip Volume, and Surcharge</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -98,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">{{Project Title}}</a> 
+      <a href="./">FareSighted: NYC Green Taxi Trip Analysis</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
@@ -121,27 +124,62 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finding-01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Page 1 Title}}</span></a>
+ <span class="menu-text">Finding 1: Trip Efficiency Across Time, Boroughs, and Routes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finding-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding 2: Pickup and Drop-off Imbalances and Service Availability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finding-03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Finding 3: Congestion, Trip Volume, and Surcharge</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Interactive Dashboards</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 1: Trip Efficiency and Satisfaction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 2: Pickup and Drop-off Imbalances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 3: Congestion and Surcharge</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboard.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">{{Interactive Dashboard}}</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./limitations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Project Limitations}}</span></a>
+ <span class="menu-text">Project Limitations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{References &amp; Sources}}</span></a>
+ <span class="menu-text">References &amp; Sources</span></a>
   </div>
 </li>
     </ul>
@@ -153,9 +191,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-03.html">Finding 3: Congestion, Trip Volume, and Surcharge</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Dashboard</h1>
+<h1 class="title">Finding 3: Congestion, Trip Volume, and Surcharge</h1>
 </div>
 
 
@@ -173,20 +211,105 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script>
-   // TODO: Update the JSON file paths to match your exported Altair/Vega-Lite dashboard specifications
-  vegaEmbed('#chart3', './charts/scatter_placeholder.json', {
+
+  vegaEmbed('#finding3_chart1', './charts/finding3_view1_surcharge_distribution.json', {
     renderer: 'svg',
-    actions: false,
+    actions: false
   })
+
+  vegaEmbed('#finding3_chart2', './charts/finding3_view2_trip_volume_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart3', './charts/finding3_view3_surcharge_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart4', './charts/finding3_view4_volume_surcharge.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding3_chart5', './charts/finding3_view5_surcharge_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
 </script>
-<div id="chart3">
+<section id="research-question" class="level3">
+<h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
+<p><strong>How does congestion surcharge vary with taxi activity throughout the day, and how is it related to trip conditions?</strong></p>
+</section>
+<section id="finding" class="level3">
+<h3 class="anchored" data-anchor-id="finding">Finding</h3>
+<p>The analysis shows clear temporal patterns in NYC green taxi activity and congestion-related surcharges. Taxi trip volume varies substantially throughout the day, with noticeable increases during major commuting periods.</p>
+<p>Because the dataset does not contain a direct measure of traffic congestion, we use <strong>congestion surcharge</strong> as an indicator associated with congestion-related pricing. We examine this measure alongside trip volume and <code>trip_dissatisfaction</code> to understand how these factors relate to one another.</p>
+</section>
+<section id="congestion-surcharge" class="level3">
+<h3 class="anchored" data-anchor-id="congestion-surcharge">Congestion Surcharge</h3>
+<p>The congestion surcharge is concentrated around its recorded surcharge values, with many trips having no surcharge and a substantial number of trips receiving the standard congestion surcharge.</p>
+<div id="finding3_chart1">
 
 </div>
-<p>TODO: Update the dashboard caption accordingly</p>
-<p>TODO: Explain the significance of the dashboard</p>
-<p>TODO: Explain the instructions of the dashboard</p>
+<p><em>Figure 1: Distribution of congestion surcharge values across taxi trips.</em></p>
+<p>The distribution shows that the surcharge is not continuously varying across trips. Instead, it is primarily associated with whether the surcharge is applied to a trip.</p>
+</section>
+<section id="temporal-patterns-in-taxi-activity" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-patterns-in-taxi-activity">Temporal Patterns in Taxi Activity</h3>
+<p>Trip volume follows clear commuting patterns throughout the day. Activity increases sharply during the morning commute, particularly around <strong>7–9 AM</strong>, and rises again during the evening commute around <strong>5–6 PM</strong>.</p>
+<div id="finding3_chart2">
+
+</div>
+<p><em>Figure 2: Taxi trip volume across the hours of the day.</em></p>
+<p>After midnight, trip activity decreases substantially. These patterns indicate that taxi demand is strongly associated with the time of day.</p>
+</section>
+<section id="congestion-surcharge-across-the-day" class="level3">
+<h3 class="anchored" data-anchor-id="congestion-surcharge-across-the-day">Congestion Surcharge Across the Day</h3>
+<p>The hourly pattern of congestion surcharge provides a different perspective on these temporal changes.</p>
+<div id="finding3_chart3">
+
+</div>
+<p><em>Figure 3: Average congestion surcharge across the hours of the day.</em></p>
+<p>While taxi activity has clear morning and evening peaks, congestion surcharge remains present throughout much of the day. Relatively high surcharge levels can therefore occur outside the main commuting peaks.</p>
+<p>This suggests that overall taxi volume alone may not fully explain the observed surcharge pattern. Other factors, such as localized traffic conditions or pricing policies, may also contribute.</p>
+</section>
+<section id="relationship-between-trip-volume-and-congestion-surcharge" class="level3">
+<h3 class="anchored" data-anchor-id="relationship-between-trip-volume-and-congestion-surcharge">Relationship Between Trip Volume and Congestion Surcharge</h3>
+<p>The relationship between hourly trip volume and average congestion surcharge can be examined directly.</p>
+<div id="finding3_chart4">
+
+</div>
+<p><em>Figure 4: Relationship between hourly trip volume and average congestion surcharge.</em></p>
+<p>The exploratory analysis shows a positive association between trip volume and congestion surcharge: periods with greater taxi activity tend to coincide with greater congestion-related surcharge activity.</p>
+<p>However, this relationship should not be interpreted as evidence that higher taxi volume directly causes higher congestion. The hourly analysis shows that surcharge can remain present even when overall trip volume is lower.</p>
+</section>
+<section id="congestion-surcharge-and-trip-dissatisfaction" class="level3">
+<h3 class="anchored" data-anchor-id="congestion-surcharge-and-trip-dissatisfaction">Congestion Surcharge and Trip Dissatisfaction</h3>
+<p>Finally, we examine whether congestion surcharge is systematically associated with <code>trip_dissatisfaction</code>, which is calculated as trip duration divided by trip distance.</p>
+<div id="finding3_chart5">
+
+</div>
+<p><em>Figure 5: Relationship between congestion surcharge and trip dissatisfaction.</em></p>
+<p>The relationship does not show a clear systematic pattern. Trips with and without congestion surcharge can exhibit a wide range of trip dissatisfaction values.</p>
+<p>This suggests that <strong>congestion surcharge and trip efficiency capture different aspects of the taxi experience</strong>. The presence of a surcharge does not necessarily imply that a trip had a high time-per-mile value.</p>
+</section>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>Overall, the analysis shows that taxi activity follows strong temporal patterns, with major increases during morning and evening commuting periods.</p>
+<p>Congestion surcharge is also associated with taxi activity, but its pattern does not perfectly mirror overall trip volume. The persistence of surcharge outside the busiest periods suggests that aggregate taxi demand is only one factor associated with congestion-related pricing.</p>
+<p>At the same time, the weak relationship between congestion surcharge and <code>trip_dissatisfaction</code> indicates that the surcharge should not be treated as a direct measure of rider experience or trip efficiency.</p>
+<p>Together, these results show why <strong>trip volume, congestion surcharge, and trip efficiency should be considered as separate but related measures</strong> when examining NYC taxi conditions.</p>
+</section>
+<section id="limitations" class="level3">
+<h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
+<p>The analysis identifies <strong>associations rather than causal relationships</strong>. A positive relationship between trip volume and congestion surcharge does not establish that higher taxi volume directly causes higher congestion.</p>
+<p>Similarly, congestion surcharge should not be interpreted as a direct measurement of traffic congestion. It may also reflect pricing policies or other conditions associated with when and where the surcharge applies.</p>
+<p>Finally, <code>trip_dissatisfaction</code> is a proxy based on trip time per mile and does not represent a direct survey-based measure of rider satisfaction.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

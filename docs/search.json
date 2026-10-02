@@ -1,63 +1,24 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction",
+    "objectID": "dashboard1.html",
+    "href": "dashboard1.html",
+    "title": "Dashboard 1: Trip Efficiency Across Time and Boroughs",
     "section": "",
-    "text": "TODO: 2–3 sentences framing the “hook.” What does the raw/unfiltered data seem to say at first glance, and why is that first impression misleading or incomplete? This sets up the tension your scrollytelling piece will resolve.\nTODO: 2–3 sentences describing what dataset you’re using and what the reader will be walked through (e.g. “this project explores X to uncover Y, moving from static charts to an interactive scroll experience that reveals Z”).",
+    "text": "Dashboard 1: Trip duration, distance, and trip dissatisfaction across boroughs and time blocks.\n\nSignificance\nThis dashboard explores how trip efficiency varies across boroughs and different periods of the day. Trip dissatisfaction is represented using trip duration per mile, allowing unusually slow trips to be identified relative to the distance travelled.\nThe dashboard connects trip duration with trip distance and dissatisfaction. This helps determine whether inefficient trips are caused primarily by long travel distances or by trips taking unusually long relative to their distance.\nBy examining these patterns across boroughs and time blocks, the dashboard highlights when and where riders may experience inefficient taxi trips.\n\n\nHow to Use the Dashboard\nUse the borough dropdown to select the pickup borough you want to investigate.\nUse the time-block selector to highlight trips occurring during different periods of the day.\nHover over individual trips in the trip-duration visualization to identify the corresponding trip in the distance and dissatisfaction scatterplot.\nYou can also brush over points in the scatterplot to highlight the corresponding trips in the trip-duration visualization.\nCompare trips with high dissatisfaction values against their distance and duration to identify unusually inefficient trips.",
     "crumbs": [
-      "Introduction"
+      "Interactive Dashboards",
+      "Dashboard 1: Trip Efficiency and Satisfaction"
     ]
   },
   {
-    "objectID": "index.html#the-dataset",
-    "href": "index.html#the-dataset",
-    "title": "Introduction",
-    "section": "The Dataset",
-    "text": "The Dataset\nTODO: 1 short paragraph. Where did this data come from, what does it capture, and over what scope/time window?\nTODO: List out the 2–4 attributes that matter most to your story, in the same style as below. Group them by theme if it helps (e.g. “Spatial attributes” vs. “Engineered/derived attributes”).\nfield_name_1: What it measures and why it matters to the story.\nfield_name_2: What it measures and why it matters to the story.\nfield_name_3: What it measures and why it matters to the story.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#dataset-information",
-    "href": "index.html#dataset-information",
-    "title": "Introduction",
-    "section": "Dataset Information",
-    "text": "Dataset Information\nDataset: TODO — dataset name\nSource: TODO — organization/provider\nURL: TODO — link to raw data\nLicense: TODO\nDate Accessed: TODO\nTime Period: TODO\nTODO: List out all attributes in the dataset\n\n\n\n\n\n\n\n\n\nAttribute Name\nAttribute Type\nData Semantics\nCardinality\n\n\n\n\nTODO\nQuantitative / Categorical (Nominal/Ordinal)\nTODO description\nTODO\n\n\nTODO\nQuantitative / Categorical (Nominal/Ordinal)\nTODO description\nTODO\n\n\nTODO\nQuantitative / Categorical (Nominal/Ordinal)\nTODO description\nTODO",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#impact-and-utility",
-    "href": "index.html#impact-and-utility",
-    "title": "Introduction",
-    "section": "Impact and Utility",
-    "text": "Impact and Utility\nTODO: 1–2 sentences on who benefits from this analysis and why (e.g. planners, analysts, decision-makers in your domain).\nTo guide the reader through the data, this story addresses the following questions:\n\nTODO: Research Question 1\nTODO: 2–3 sentences previewing what section 1 (chart1) will reveal.\n\n\nTODO: Research Question 2\nTODO: 2–3 sentences previewing what section 2 (chart2) will reveal.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "dashboard.html",
-    "href": "dashboard.html",
-    "title": "Dashboard",
+    "objectID": "dashboard2.html",
+    "href": "dashboard2.html",
+    "title": "Dashboard 2: Pickup and Drop-off Imbalances",
     "section": "",
-    "text": "TODO: Update the dashboard caption accordingly\nTODO: Explain the significance of the dashboard\nTODO: Explain the instructions of the dashboard",
+    "text": "Dashboard 2: Pickup and drop-off volumes, imbalances, and average fares across NYC boroughs and hours of the day.\n\nSignificance\nThis dashboard investigates how pickup and drop-off patterns reveal potential supply-demand imbalances across NYC boroughs.\nThe flow visualization shows how taxi trips move between pickup and drop-off boroughs, while the hourly pickup and drop-off comparison highlights periods when substantially more passengers are entering or leaving a borough.\nLarge differences between pickup and drop-off volumes can indicate uneven taxi activity and provide a proxy for potential differences in service availability. The dashboard also compares average fares during these periods to investigate how fare patterns are associated with pickup and drop-off imbalances.\nThe Bronx is particularly useful to investigate because the exploratory analysis identified substantially more drop-offs than pickups in the borough.\n\n\nHow to Use the Dashboard\nSelect a pickup borough in the flow chart to focus the remaining visualizations on trips originating from that borough.\nExamine the hourly pickup and drop-off volumes to identify periods when the two values differ substantially.\nUse the brush interaction on the pickup/drop-off chart to select particular hours of the day.\nThe difference visualization will update to show the magnitude and direction of the pickup/drop-off imbalance during the selected hours.\nThe fare visualization will also update, allowing you to compare average pickup and drop-off fares during those periods.\nTry selecting different boroughs and hours to determine where the largest imbalances occur and whether those periods are also associated with differences in average fares.",
     "crumbs": [
-      "{{Interactive Dashboard}}"
-    ]
-  },
-  {
-    "objectID": "finding-01.html",
-    "href": "finding-01.html",
-    "title": "TODO: Finding Title",
-    "section": "",
-    "text": "Figure 1: TODO: Update the figure caption accordingly\nTODO: Explain the significance of the plot\n\n\n\nFigure 2: TODO: Update the figure caption accordingly",
-    "crumbs": [
-      "Findings",
-      "{{Page 1 Title}}"
+      "Interactive Dashboards",
+      "Dashboard 2: Pickup and Drop-off Imbalances"
     ]
   },
   {
@@ -65,9 +26,273 @@
     "href": "limitations.html",
     "title": "Limitations",
     "section": "",
-    "text": "TODO: Address the limitations and trade-offs that were considered",
+    "text": "The original cleaned dataset contains 727,433 observations. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.\nAs a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.\n\n\n\nThe dataset does not contain a direct measure of passenger satisfaction.\nInstead, we use:\n\ntrip dissatisfaction;\npickup and drop-off imbalance;\nfare;\ntrip volume; and\ncongestion surcharge\n\nas observable proxies for aspects of the rider experience.\nThese variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.\n\n\n\nSome of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.\nIn particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.\n\n\n\nThe trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.\n\n\n\nSeveral views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.\nAggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.\n\n\n\nThe visualizations identify relationships and patterns in the data, but they do not establish causal relationships.\nFor example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.\n\n\n\nThe original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.\nAlthough the data-wrangling process attempted to address these issues, some unusual observations may remain.\n\n\n\nTaxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.",
     "crumbs": [
-      "{{Project Limitations}}"
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#sampling",
+    "href": "limitations.html#sampling",
+    "title": "Limitations",
+    "section": "",
+    "text": "The original cleaned dataset contains 727,433 observations. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.\nAs a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#proxy-for-satisfaction",
+    "href": "limitations.html#proxy-for-satisfaction",
+    "title": "Limitations",
+    "section": "",
+    "text": "The dataset does not contain a direct measure of passenger satisfaction.\nInstead, we use:\n\ntrip dissatisfaction;\npickup and drop-off imbalance;\nfare;\ntrip volume; and\ncongestion surcharge\n\nas observable proxies for aspects of the rider experience.\nThese variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#visual-complexity",
+    "href": "limitations.html#visual-complexity",
+    "title": "Limitations",
+    "section": "",
+    "text": "Some of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.\nIn particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#individual-trip-visualization",
+    "href": "limitations.html#individual-trip-visualization",
+    "title": "Limitations",
+    "section": "",
+    "text": "The trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#aggregation",
+    "href": "limitations.html#aggregation",
+    "title": "Limitations",
+    "section": "",
+    "text": "Several views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.\nAggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#association-vs.-causation",
+    "href": "limitations.html#association-vs.-causation",
+    "title": "Limitations",
+    "section": "",
+    "text": "The visualizations identify relationships and patterns in the data, but they do not establish causal relationships.\nFor example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#data-quality",
+    "href": "limitations.html#data-quality",
+    "title": "Limitations",
+    "section": "",
+    "text": "The original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.\nAlthough the data-wrangling process attempted to address these issues, some unusual observations may remain.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "limitations.html#geographic-interpretation",
+    "href": "limitations.html#geographic-interpretation",
+    "title": "Limitations",
+    "section": "",
+    "text": "Taxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.",
+    "crumbs": [
+      "Project Limitations"
+    ]
+  },
+  {
+    "objectID": "finding-02.html",
+    "href": "finding-02.html",
+    "title": "Finding 2: Pickup and Drop-off Imbalances and Service Availability",
+    "section": "",
+    "text": "Research Question\nHow do pickup and drop-off patterns reveal potential supply-demand imbalances, and how are these imbalances associated with fares?\n\n\nFinding\nPickup and drop-off patterns reveal important differences in taxi activity across NYC boroughs. While pickup and drop-off volumes are generally relatively symmetric, some boroughs show noticeable imbalances that may indicate uneven taxi availability.\nThe Bronx stands out because its drop-off volume is substantially higher than its pickup volume. This suggests that taxis frequently enter the Bronx with passengers but may have fewer passengers available for outbound trips.\nAlthough the dataset does not directly measure rider wait times, this imbalance can be interpreted as a proxy for potential service availability. If more taxis are entering an area than leaving with passengers, fewer taxis may be immediately available for new riders in that area.\n\n\n\nFigure 1: Overall pickup and drop-off volumes across NYC boroughs.\n\n\nTemporal Patterns\nPickup and drop-off activity generally follows similar hourly patterns. Taxi activity increases substantially during the morning and evening commuting periods, while overall activity decreases after midnight.\n\n\n\nFigure 2: Pickup volume by borough and hour.\n\n\n\nFigure 3: Drop-off volume by borough and hour.\nComparing pickup and drop-off volumes by hour helps identify periods when the balance between incoming and outgoing taxi trips changes. These differences provide additional context for understanding potential supply-demand mismatches.\n\n\nPickup and Drop-off Imbalance\nThe overall difference between pickup and drop-off activity highlights the boroughs where taxi flows are least balanced.\n\n\n\nFigure 4: Difference between pickup and drop-off volumes by borough.\nThe Bronx shows the most noticeable imbalance, with substantially more drop-offs than pickups. This pattern is consistent with taxis carrying passengers into the borough without an equivalent number of passenger-carrying trips originating there.\n\n\nFare Patterns\nFare distributions are generally similar across boroughs, but differences emerge when comparing trips by pickup and drop-off location.\n\n\n\nFigure 5: Average fare by pickup borough.\nIn particular, drop-offs in the Bronx tend to have higher fares than pickups. This may reflect differences in trip length and the prevalence of inter-borough trips entering the Bronx.\nThe relationship between fare and trip characteristics can also be examined directly.\n\n\n\nFigure 6: Relationship between fare amount and trip distance.\n\n\n\nFigure 7: Relationship between fare amount and trip duration.\nThese views provide context for interpreting fare differences across boroughs and routes.\n\n\nFare and Trip Dissatisfaction\nThe relationship between fare amount and trip_dissatisfaction is relatively weak. High and low fares occur across a wide range of dissatisfaction values.\n\n\n\nFigure 8: Relationship between fare amount and trip dissatisfaction.\n\n\nRoute Patterns\nThe most frequent routes are concentrated within Manhattan, Queens, and Brooklyn, while several major cross-borough routes also account for substantial taxi activity.\nRoutes such as Brooklyn–Manhattan, Manhattan–Bronx, and Manhattan–Queens are among the prominent cross-borough connections. These high-volume routes overlap with areas where inefficient trips are also observed.\nThis suggests that frequently travelled areas can simultaneously experience high taxi demand and inefficient travel conditions.\n\n\nInterpretation\nThe pickup and drop-off imbalance provides evidence of uneven taxi distribution across NYC. The Bronx, in particular, receives substantially more taxi trips than it generates, suggesting that taxi availability may differ depending on trip direction.\nThese patterns do not directly establish rider wait times or prove that fare differences are caused by supply-demand imbalance. Instead, they identify areas where pickup/drop-off patterns and fare characteristics provide useful indicators of differences in the taxi experience.\n\n\nLimitations\nPickup and drop-off volumes are used as an indirect measure of potential supply-demand imbalance. The dataset does not contain direct measurements of taxi availability, passenger wait time, or unmet demand.\nTherefore, the observed imbalances should be interpreted as proxies rather than direct measurements of rider waiting time or satisfaction.",
+    "crumbs": [
+      "Findings",
+      "Finding 2: Pickup and Drop-off Imbalances and Service Availability"
+    ]
+  },
+  {
+    "objectID": "reference.html",
+    "href": "reference.html",
+    "title": "References",
+    "section": "",
+    "text": "New York City Taxi and Limousine Commission.\n2023 Green Taxi Trip Data. NYC Open Data.\nhttps://data.cityofnewyork.us/Transportation/2023-Green-Taxi-Trip-Data/2d59-ymk4\n\n\n\nNew York City Taxi and Limousine Commission.\nGreen Taxi Trip Data Dictionary.\n\n\n\nNew York City Taxi and Limousine Commission.\nTaxi Zone Lookup Table.\n\n\n\nThe dashboards were developed using Python, Pandas, NumPy, Altair, and Vega-Lite.\nThe final interactive website uses exported Vega-Lite JSON specifications embedded through vega-embed.\n\n\n\nFareSighted — NYC Taxi Trip Analysis\nTeam FareSighted",
+    "crumbs": [
+      "References & Sources"
+    ]
+  },
+  {
+    "objectID": "reference.html#dataset",
+    "href": "reference.html#dataset",
+    "title": "References",
+    "section": "",
+    "text": "New York City Taxi and Limousine Commission.\n2023 Green Taxi Trip Data. NYC Open Data.\nhttps://data.cityofnewyork.us/Transportation/2023-Green-Taxi-Trip-Data/2d59-ymk4",
+    "crumbs": [
+      "References & Sources"
+    ]
+  },
+  {
+    "objectID": "reference.html#data-dictionary",
+    "href": "reference.html#data-dictionary",
+    "title": "References",
+    "section": "",
+    "text": "New York City Taxi and Limousine Commission.\nGreen Taxi Trip Data Dictionary.",
+    "crumbs": [
+      "References & Sources"
+    ]
+  },
+  {
+    "objectID": "reference.html#taxi-zone-information",
+    "href": "reference.html#taxi-zone-information",
+    "title": "References",
+    "section": "",
+    "text": "New York City Taxi and Limousine Commission.\nTaxi Zone Lookup Table.",
+    "crumbs": [
+      "References & Sources"
+    ]
+  },
+  {
+    "objectID": "reference.html#visualization",
+    "href": "reference.html#visualization",
+    "title": "References",
+    "section": "",
+    "text": "The dashboards were developed using Python, Pandas, NumPy, Altair, and Vega-Lite.\nThe final interactive website uses exported Vega-Lite JSON specifications embedded through vega-embed.",
+    "crumbs": [
+      "References & Sources"
+    ]
+  },
+  {
+    "objectID": "reference.html#project",
+    "href": "reference.html#project",
+    "title": "References",
+    "section": "",
+    "text": "FareSighted — NYC Taxi Trip Analysis\nTeam FareSighted",
+    "crumbs": [
+      "References & Sources"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "",
+    "text": "Transportation systems form the pulse of urban life, shaping how millions of people move through cities every day. In a city as dynamic as New York, taxis play an important role in connecting neighborhoods, supporting mobility, and filling gaps in the public transportation network.\nOur project explores the 2023 NYC Green Taxi Trip dataset, which contains detailed records of green taxi trips across New York City. Green taxis, also known as Boro Taxis, primarily operate in the outer boroughs and northern Manhattan.\nA central question motivating our analysis is:\n\nHow do trip conditions, travel patterns, and congestion-related factors shape the experience of riding an NYC green taxi?\n\nBecause the dataset does not contain a direct measure of passenger satisfaction, we use several measurable characteristics as proxies for rider experience, including trip efficiency, pickup and drop-off imbalances, fares, and congestion surcharge.\nThe project uses interactive visualizations to allow users to investigate these patterns across boroughs, hours of the day, trip distance, trip duration, and congestion conditions.\n\n\n\n\nThe original 2023 NYC Green Taxi Trip dataset contained approximately 787,000 rows and 19 columns. During data exploration, we identified several issues that required cleaning and transformation before the data could be used for analysis.\nTwo additional datasets were used during the data-wrangling process:\n\nGreen_Taxi_Trip_Data_Data_Dictionary.xlsx — defines the semantics and categories associated with numeric codes.\ntaxi_zone_lookup.csv — identifies the borough associated with each NYC taxi zone.\n\nThe data-wrangling process involved:\n\ncorrecting data formats;\nmapping numeric category codes to meaningful labels;\nmapping taxi zones to their corresponding boroughs;\ncreating derived variables for analysis;\nremoving missing and invalid observations; and\npreparing the dataset for interactive visualization.\n\nThe final cleaned dataset contains 727,433 rows and 26 attributes.\n\n\n\nlpep_pickup_datetime\nThe date and time when the taxi meter was engaged.\nlpep_dropoff_datetime\nThe date and time when the taxi meter was disengaged.\nPULocation\nThe borough where the trip began.\nDOLocation\nThe borough where the trip ended.\ntrip_distance\nThe elapsed trip distance in miles reported by the taximeter.\ntrip_duration\nThe duration of the taxi trip in minutes, calculated from pickup and drop-off timestamps.\nfare_amount\nThe time-and-distance fare calculated by the meter.\ntotal_amount\nThe total amount charged to the passenger, excluding cash tips.\ncongestion_surcharge\nThe amount collected for the New York State congestion surcharge.\ntrip_dissatisfaction\nA derived proxy for trip inefficiency, calculated as:\n[ = ]\nA higher value indicates more minutes spent per mile.\nmonth\nThe month in which the trip occurred.\nweekday\nThe day of the week on which the trip occurred.\nseason\nThe season associated with the trip.\n\n\n\n\nDataset: 2023 NYC Green Taxi Trip Dataset\nSource: New York City Taxi and Limousine Commission (TLC)\nPlatform: NYC Open Data\nTime Period: January 1, 2023 – December 31, 2023\nOriginal Dataset: Approximately 787,000 rows and 19 columns\nClean Dataset: 727,433 rows and 26 columns\nAnalysis Dataset: A sample of the cleaned dataset was used for exploratory visualization because of computational limitations and Altair’s handling of large datasets.\n\n\n\n\n\n\n\n\n\n\n\nAttribute\nType\nDescription\n\n\n\n\nVendorID\nCategorical\nTPEP provider that supplied the trip record\n\n\nlpep_pickup_datetime\nTemporal\nDate and time of pickup\n\n\nlpep_dropoff_datetime\nTemporal\nDate and time of drop-off\n\n\nstore_and_fwd_flag\nCategorical\nWhether the trip record was stored before transmission\n\n\nRatecodeID\nCategorical\nFinal rate code applied to the trip\n\n\nPULocationID\nCategorical\nTaxi zone where the trip began\n\n\nDOLocationID\nCategorical\nTaxi zone where the trip ended\n\n\npassenger_count\nQuantitative\nNumber of passengers\n\n\ntrip_distance\nQuantitative\nTrip distance in miles\n\n\nfare_amount\nQuantitative\nMetered fare\n\n\nextra\nQuantitative\nMiscellaneous extras and surcharges\n\n\nmta_tax\nQuantitative\nMTA tax\n\n\ntip_amount\nQuantitative\nCredit-card tip\n\n\ntolls_amount\nQuantitative\nTotal toll amount\n\n\nimprovement_surcharge\nQuantitative\nImprovement surcharge\n\n\ntotal_amount\nQuantitative\nTotal passenger charge excluding cash tips\n\n\npayment_type\nCategorical\nPayment method\n\n\ntrip_type\nCategorical\nStreet-hail or dispatch\n\n\ncongestion_surcharge\nQuantitative\nNYS congestion surcharge\n\n\nPULocation\nCategorical\nPickup borough\n\n\nDOLocation\nCategorical\nDrop-off borough\n\n\ntrip_duration\nQuantitative\nDuration of the trip in minutes\n\n\ntrip_dissatisfaction\nQuantitative\nDuration divided by distance\n\n\nmonth\nOrdinal\nMonth of the trip\n\n\nweekday\nOrdinal\nDay of the week\n\n\nseason\nCategorical\nSeason of the trip\n\n\n\n\n\n\nThe data was cleaned and transformed before visualization.\nSeveral derived variables were particularly important to the analysis. trip_duration was calculated from the pickup and drop-off timestamps, while trip_dissatisfaction was derived from trip duration and distance.\nFor the interactive views, the dataset was also aggregated by borough, hour, and trip characteristics where necessary. These transformations allowed the visualizations to remain responsive while preserving the patterns required for analysis.\nBecause the complete dataset was large, a sample of the cleaned data was used for the exploratory visualizations.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#about-the-data",
+    "href": "index.html#about-the-data",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "",
+    "text": "The original 2023 NYC Green Taxi Trip dataset contained approximately 787,000 rows and 19 columns. During data exploration, we identified several issues that required cleaning and transformation before the data could be used for analysis.\nTwo additional datasets were used during the data-wrangling process:\n\nGreen_Taxi_Trip_Data_Data_Dictionary.xlsx — defines the semantics and categories associated with numeric codes.\ntaxi_zone_lookup.csv — identifies the borough associated with each NYC taxi zone.\n\nThe data-wrangling process involved:\n\ncorrecting data formats;\nmapping numeric category codes to meaningful labels;\nmapping taxi zones to their corresponding boroughs;\ncreating derived variables for analysis;\nremoving missing and invalid observations; and\npreparing the dataset for interactive visualization.\n\nThe final cleaned dataset contains 727,433 rows and 26 attributes.\n\n\n\nlpep_pickup_datetime\nThe date and time when the taxi meter was engaged.\nlpep_dropoff_datetime\nThe date and time when the taxi meter was disengaged.\nPULocation\nThe borough where the trip began.\nDOLocation\nThe borough where the trip ended.\ntrip_distance\nThe elapsed trip distance in miles reported by the taximeter.\ntrip_duration\nThe duration of the taxi trip in minutes, calculated from pickup and drop-off timestamps.\nfare_amount\nThe time-and-distance fare calculated by the meter.\ntotal_amount\nThe total amount charged to the passenger, excluding cash tips.\ncongestion_surcharge\nThe amount collected for the New York State congestion surcharge.\ntrip_dissatisfaction\nA derived proxy for trip inefficiency, calculated as:\n[ = ]\nA higher value indicates more minutes spent per mile.\nmonth\nThe month in which the trip occurred.\nweekday\nThe day of the week on which the trip occurred.\nseason\nThe season associated with the trip.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#dataset-information",
+    "href": "index.html#dataset-information",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "",
+    "text": "Dataset: 2023 NYC Green Taxi Trip Dataset\nSource: New York City Taxi and Limousine Commission (TLC)\nPlatform: NYC Open Data\nTime Period: January 1, 2023 – December 31, 2023\nOriginal Dataset: Approximately 787,000 rows and 19 columns\nClean Dataset: 727,433 rows and 26 columns\nAnalysis Dataset: A sample of the cleaned dataset was used for exploratory visualization because of computational limitations and Altair’s handling of large datasets.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#attribute-summary",
+    "href": "index.html#attribute-summary",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "",
+    "text": "Attribute\nType\nDescription\n\n\n\n\nVendorID\nCategorical\nTPEP provider that supplied the trip record\n\n\nlpep_pickup_datetime\nTemporal\nDate and time of pickup\n\n\nlpep_dropoff_datetime\nTemporal\nDate and time of drop-off\n\n\nstore_and_fwd_flag\nCategorical\nWhether the trip record was stored before transmission\n\n\nRatecodeID\nCategorical\nFinal rate code applied to the trip\n\n\nPULocationID\nCategorical\nTaxi zone where the trip began\n\n\nDOLocationID\nCategorical\nTaxi zone where the trip ended\n\n\npassenger_count\nQuantitative\nNumber of passengers\n\n\ntrip_distance\nQuantitative\nTrip distance in miles\n\n\nfare_amount\nQuantitative\nMetered fare\n\n\nextra\nQuantitative\nMiscellaneous extras and surcharges\n\n\nmta_tax\nQuantitative\nMTA tax\n\n\ntip_amount\nQuantitative\nCredit-card tip\n\n\ntolls_amount\nQuantitative\nTotal toll amount\n\n\nimprovement_surcharge\nQuantitative\nImprovement surcharge\n\n\ntotal_amount\nQuantitative\nTotal passenger charge excluding cash tips\n\n\npayment_type\nCategorical\nPayment method\n\n\ntrip_type\nCategorical\nStreet-hail or dispatch\n\n\ncongestion_surcharge\nQuantitative\nNYS congestion surcharge\n\n\nPULocation\nCategorical\nPickup borough\n\n\nDOLocation\nCategorical\nDrop-off borough\n\n\ntrip_duration\nQuantitative\nDuration of the trip in minutes\n\n\ntrip_dissatisfaction\nQuantitative\nDuration divided by distance\n\n\nmonth\nOrdinal\nMonth of the trip\n\n\nweekday\nOrdinal\nDay of the week\n\n\nseason\nCategorical\nSeason of the trip",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#data-preparation",
+    "href": "index.html#data-preparation",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "",
+    "text": "The data was cleaned and transformed before visualization.\nSeveral derived variables were particularly important to the analysis. trip_duration was calculated from the pickup and drop-off timestamps, while trip_dissatisfaction was derived from trip duration and distance.\nFor the interactive views, the dataset was also aggregated by borough, hour, and trip characteristics where necessary. These transformations allowed the visualizations to remain responsive while preserving the patterns required for analysis.\nBecause the complete dataset was large, a sample of the cleaned data was used for the exploratory visualizations.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#finding-1-trip-efficiency-and-satisfaction",
+    "href": "index.html#finding-1-trip-efficiency-and-satisfaction",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "Finding 1 — Trip Efficiency and Satisfaction",
+    "text": "Finding 1 — Trip Efficiency and Satisfaction\nHow do trip durations and satisfaction vary across boroughs and time blocks?\nThe first finding investigates whether trips become longer or less efficient during particular times of day and whether these patterns differ across boroughs.\nThe analysis connects trip duration, trip distance, and trip dissatisfaction to identify trips that take disproportionately long relative to the distance travelled.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#finding-2-pickup-and-drop-off-imbalances",
+    "href": "index.html#finding-2-pickup-and-drop-off-imbalances",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "Finding 2 — Pickup and Drop-off Imbalances",
+    "text": "Finding 2 — Pickup and Drop-off Imbalances\nHow do pickup and drop-off patterns reflect supply-demand mismatches and potential wait time expectations, and how is fare related to such imbalance?\nThe second finding examines differences between pickup and drop-off volumes across boroughs and hours.\nLarge differences between pickups and drop-offs can provide an indication of potential supply-demand imbalance. The visualization also connects these patterns to average fares.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#finding-3-congestion-and-surcharge",
+    "href": "index.html#finding-3-congestion-and-surcharge",
+    "title": "FareSighted: NYC Green Taxi Trip Analysis",
+    "section": "Finding 3 — Congestion and Surcharge",
+    "text": "Finding 3 — Congestion and Surcharge\nHow does congestion surcharge reflect congestion on routes?\nThe final finding investigates the relationship between trip volume and congestion surcharge throughout the day.\nBy comparing hourly trip volumes with average congestion surcharge, we can examine whether periods of greater taxi activity coincide with higher congestion-related charges.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "finding-03.html",
+    "href": "finding-03.html",
+    "title": "Finding 3: Congestion, Trip Volume, and Surcharge",
+    "section": "",
+    "text": "Research Question\nHow does congestion surcharge vary with taxi activity throughout the day, and how is it related to trip conditions?\n\n\nFinding\nThe analysis shows clear temporal patterns in NYC green taxi activity and congestion-related surcharges. Taxi trip volume varies substantially throughout the day, with noticeable increases during major commuting periods.\nBecause the dataset does not contain a direct measure of traffic congestion, we use congestion surcharge as an indicator associated with congestion-related pricing. We examine this measure alongside trip volume and trip_dissatisfaction to understand how these factors relate to one another.\n\n\nCongestion Surcharge\nThe congestion surcharge is concentrated around its recorded surcharge values, with many trips having no surcharge and a substantial number of trips receiving the standard congestion surcharge.\n\n\n\nFigure 1: Distribution of congestion surcharge values across taxi trips.\nThe distribution shows that the surcharge is not continuously varying across trips. Instead, it is primarily associated with whether the surcharge is applied to a trip.\n\n\nTemporal Patterns in Taxi Activity\nTrip volume follows clear commuting patterns throughout the day. Activity increases sharply during the morning commute, particularly around 7–9 AM, and rises again during the evening commute around 5–6 PM.\n\n\n\nFigure 2: Taxi trip volume across the hours of the day.\nAfter midnight, trip activity decreases substantially. These patterns indicate that taxi demand is strongly associated with the time of day.\n\n\nCongestion Surcharge Across the Day\nThe hourly pattern of congestion surcharge provides a different perspective on these temporal changes.\n\n\n\nFigure 3: Average congestion surcharge across the hours of the day.\nWhile taxi activity has clear morning and evening peaks, congestion surcharge remains present throughout much of the day. Relatively high surcharge levels can therefore occur outside the main commuting peaks.\nThis suggests that overall taxi volume alone may not fully explain the observed surcharge pattern. Other factors, such as localized traffic conditions or pricing policies, may also contribute.\n\n\nRelationship Between Trip Volume and Congestion Surcharge\nThe relationship between hourly trip volume and average congestion surcharge can be examined directly.\n\n\n\nFigure 4: Relationship between hourly trip volume and average congestion surcharge.\nThe exploratory analysis shows a positive association between trip volume and congestion surcharge: periods with greater taxi activity tend to coincide with greater congestion-related surcharge activity.\nHowever, this relationship should not be interpreted as evidence that higher taxi volume directly causes higher congestion. The hourly analysis shows that surcharge can remain present even when overall trip volume is lower.\n\n\nCongestion Surcharge and Trip Dissatisfaction\nFinally, we examine whether congestion surcharge is systematically associated with trip_dissatisfaction, which is calculated as trip duration divided by trip distance.\n\n\n\nFigure 5: Relationship between congestion surcharge and trip dissatisfaction.\nThe relationship does not show a clear systematic pattern. Trips with and without congestion surcharge can exhibit a wide range of trip dissatisfaction values.\nThis suggests that congestion surcharge and trip efficiency capture different aspects of the taxi experience. The presence of a surcharge does not necessarily imply that a trip had a high time-per-mile value.\n\n\nInterpretation\nOverall, the analysis shows that taxi activity follows strong temporal patterns, with major increases during morning and evening commuting periods.\nCongestion surcharge is also associated with taxi activity, but its pattern does not perfectly mirror overall trip volume. The persistence of surcharge outside the busiest periods suggests that aggregate taxi demand is only one factor associated with congestion-related pricing.\nAt the same time, the weak relationship between congestion surcharge and trip_dissatisfaction indicates that the surcharge should not be treated as a direct measure of rider experience or trip efficiency.\nTogether, these results show why trip volume, congestion surcharge, and trip efficiency should be considered as separate but related measures when examining NYC taxi conditions.\n\n\nLimitations\nThe analysis identifies associations rather than causal relationships. A positive relationship between trip volume and congestion surcharge does not establish that higher taxi volume directly causes higher congestion.\nSimilarly, congestion surcharge should not be interpreted as a direct measurement of traffic congestion. It may also reflect pricing policies or other conditions associated with when and where the surcharge applies.\nFinally, trip_dissatisfaction is a proxy based on trip time per mile and does not represent a direct survey-based measure of rider satisfaction.",
+    "crumbs": [
+      "Findings",
+      "Finding 3: Congestion, Trip Volume, and Surcharge"
+    ]
+  },
+  {
+    "objectID": "finding-01.html",
+    "href": "finding-01.html",
+    "title": "Finding 1: Trip Efficiency Across Time, Boroughs, and Routes",
+    "section": "",
+    "text": "Research Question\nHow does trip efficiency vary across time, boroughs, and routes, and where do riders experience the most inefficient trips?\n\n\nFinding\nOur exploratory analysis shows that trip efficiency varies substantially across NYC green taxi trips. Because trip duration alone does not account for the distance travelled, we use trip time per mile as a proxy for trip efficiency and potential rider dissatisfaction.\nMost taxi trips are relatively short, with the majority concentrated within the 0–5 mile range. Trip duration is strongly right-skewed: the average trip lasts approximately 18 minutes, while a small number of extreme trips last several hours. These outliers demonstrate why raw trip duration alone can be misleading when evaluating the efficiency of a trip.\nThe derived trip_dissatisfaction metric, calculated as trip duration divided by trip distance, provides a more informative measure of efficiency. The average is approximately 11 minutes per mile, while the median is approximately 6 minutes per mile. Extreme observations, including unusually long trips over very short distances, substantially increase the mean.\n\n\n\nFigure 1: Trip volume across the 24 hours of the day.\n\n\n\nFigure 2: Average trip duration across the 24 hours of the day.\n\n\nTemporal Patterns\nTrip volume increases sharply during the morning commute, particularly between 7–9 AM, and rises again during the evening rush hour around 5 PM.\nAlthough average trip durations remain relatively stable throughout much of the day, dissatisfaction varies across boroughs and hours.\n\n\n\nFigure 3: Average trip dissatisfaction, measured as trip time per mile, across hours of the day.\nManhattan and the Bronx exhibit higher levels of average dissatisfaction overall, while Staten Island has the lowest average dissatisfaction at approximately 3 minutes per mile. The time of peak dissatisfaction also differs between boroughs, suggesting that inefficiency is influenced by localized traffic and travel conditions.\n\n\n\nFigure 4: Average trip dissatisfaction across pickup boroughs and hours of the day.\n\n\nRelationship Between Distance, Duration, and Efficiency\nTrip distance and trip duration provide important context for interpreting trip dissatisfaction. A longer trip is not necessarily inefficient if the additional travel time is proportional to the distance travelled.\n\n\n\nFigure 5: Relationship between trip distance and trip dissatisfaction.\n\n\n\nFigure 6: Relationship between trip duration and trip dissatisfaction.\nThese views show that dissatisfaction is not determined simply by trip distance or trip duration. Short trips can have relatively high time-per-mile values, while long trips can have relatively low values.\n\n\nRoute Patterns\nRoute-level analysis highlights several corridors with particularly long travel times. Brooklyn–Bronx, Queens–Staten Island, and Manhattan–EWR contain some of the longest-duration trips. However, not all high-duration routes are also the longest-distance routes.\nIn particular, the Brooklyn–Bronx corridor has relatively high trip duration without being among the longest-distance routes. This indicates lower trip efficiency and suggests that traffic or route-specific conditions may contribute to longer travel times.\n\n\n\nFigure 7: Average trip dissatisfaction across pickup and drop-off borough combinations.\n\n\n\nFigure 8: Average trip duration and distance across borough-to-borough routes, with point size representing trip volume.\nOther routes, including Bronx–Brooklyn and Queens–Brooklyn, also show relatively high levels of dissatisfaction.\n\n\nInterpretation\nOverall, the analysis suggests that trip dissatisfaction is not determined simply by how long a trip lasts or how far it travels. Instead, the relationship between time and distance provides a more useful way to identify inefficient trips.\nTrips that require substantially more time than expected for their distance may indicate congestion, route-specific inefficiencies, or other travel conditions that can negatively affect the rider experience.\n\n\nLimitations\ntrip_dissatisfaction is a proxy for rider satisfaction, rather than a direct measurement of satisfaction. The dataset does not contain an explicit rider satisfaction score.\nExtreme trip durations and very short distances can also produce unusually large values, so these observations should be interpreted carefully.",
+    "crumbs": [
+      "Findings",
+      "Finding 1: Trip Efficiency Across Time, Boroughs, and Routes"
+    ]
+  },
+  {
+    "objectID": "dashboard3.html",
+    "href": "dashboard3.html",
+    "title": "Dashboard 3: Trip Volume and Congestion",
+    "section": "",
+    "text": "Dashboard 3: Hourly trip volume and average congestion surcharge, with an interactive analysis of their relationship.\n\nSignificance\nThis dashboard investigates how congestion surcharge varies throughout the day and how it relates to taxi trip volume.\nThe hourly visualization compares pickup volume, drop-off volume, and average congestion surcharge. This makes it possible to identify periods of high taxi activity and determine whether congestion surcharge follows a similar temporal pattern.\nThe accompanying scatterplot directly compares hourly trip volume with average congestion surcharge, making the relationship between the two variables easier to examine.\nThe analysis shows that trip volumes increase during major commuting periods, while congestion surcharge remains relatively high throughout much of the day. This suggests that aggregate taxi demand alone may not fully explain congestion-related pricing.\n\n\nHow to Use the Dashboard\nExamine the hourly lines to compare pickup volume, drop-off volume, and average congestion surcharge throughout the day.\nUse the interactive legend to focus on pickup or drop-off patterns and reduce visual clutter.\nHover over points to inspect individual hours and connect observations between the hourly visualization and scatterplot.\nUse the brush interaction on the hourly chart to select a range of hours. The corresponding observations will be highlighted in the scatterplot.\nUse the regression-line checkbox to display the overall relationship between trip volume and average congestion surcharge.\nCompare peak commuting periods with lower-volume hours to determine whether congestion surcharge follows the same pattern as taxi demand.",
+    "crumbs": [
+      "Interactive Dashboards",
+      "Dashboard 3: Congestion and Surcharge"
     ]
   }
 ]

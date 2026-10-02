@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Limitations – FareSighted: NYC Green Taxi Trip Analysis</title>
+<title>Dashboard 3: Trip Volume and Congestion – FareSighted: NYC Green Taxi Trip Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./limitations.html">Project Limitations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dashboard1.html">Interactive Dashboards</a></li><li class="breadcrumb-item"><a href="./dashboard3.html">Dashboard 3: Congestion and Surcharge</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboard3.html" class="sidebar-item-text sidebar-link">
+  <a href="./dashboard3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Dashboard 3: Congestion and Surcharge</span></a>
   </div>
 </li>
@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limitations.html" class="sidebar-item-text sidebar-link active">
+  <a href="./limitations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Limitations</span></a>
   </div>
 </li>
@@ -191,9 +191,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dashboard1.html">Interactive Dashboards</a></li><li class="breadcrumb-item"><a href="./dashboard3.html">Dashboard 3: Congestion and Surcharge</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Limitations</h1>
+<h1 class="title">Dashboard 3: Trip Volume and Congestion</h1>
 </div>
 
 
@@ -210,57 +210,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="limitations" class="level1">
-<h1>Limitations</h1>
-<section id="sampling" class="level2">
-<h2 class="anchored" data-anchor-id="sampling">Sampling</h2>
-<p>The original cleaned dataset contains <strong>727,433 observations</strong>. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.</p>
-<p>As a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.</p>
+<script>
+  vegaEmbed('#dashboard3', './charts/dashboard3.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+</script>
+<div id="dashboard3">
+
+</div>
+<p><em>Dashboard 3: Hourly trip volume and average congestion surcharge, with an interactive analysis of their relationship.</em></p>
+<section id="significance" class="level3">
+<h3 class="anchored" data-anchor-id="significance">Significance</h3>
+<p>This dashboard investigates how congestion surcharge varies throughout the day and how it relates to taxi trip volume.</p>
+<p>The hourly visualization compares pickup volume, drop-off volume, and average congestion surcharge. This makes it possible to identify periods of high taxi activity and determine whether congestion surcharge follows a similar temporal pattern.</p>
+<p>The accompanying scatterplot directly compares hourly trip volume with average congestion surcharge, making the relationship between the two variables easier to examine.</p>
+<p>The analysis shows that trip volumes increase during major commuting periods, while congestion surcharge remains relatively high throughout much of the day. This suggests that aggregate taxi demand alone may not fully explain congestion-related pricing.</p>
 </section>
-<section id="proxy-for-satisfaction" class="level2">
-<h2 class="anchored" data-anchor-id="proxy-for-satisfaction">Proxy for Satisfaction</h2>
-<p>The dataset does not contain a direct measure of passenger satisfaction.</p>
-<p>Instead, we use:</p>
-<ul>
-<li>trip dissatisfaction;</li>
-<li>pickup and drop-off imbalance;</li>
-<li>fare;</li>
-<li>trip volume; and</li>
-<li>congestion surcharge</li>
-</ul>
-<p>as observable proxies for aspects of the rider experience.</p>
-<p>These variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.</p>
-</section>
-<section id="visual-complexity" class="level2">
-<h2 class="anchored" data-anchor-id="visual-complexity">Visual Complexity</h2>
-<p>Some of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.</p>
-<p>In particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.</p>
-</section>
-<section id="individual-trip-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="individual-trip-visualization">Individual Trip Visualization</h2>
-<p>The trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.</p>
-</section>
-<section id="aggregation" class="level2">
-<h2 class="anchored" data-anchor-id="aggregation">Aggregation</h2>
-<p>Several views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.</p>
-<p>Aggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.</p>
-</section>
-<section id="association-vs.-causation" class="level2">
-<h2 class="anchored" data-anchor-id="association-vs.-causation">Association vs.&nbsp;Causation</h2>
-<p>The visualizations identify relationships and patterns in the data, but they do not establish causal relationships.</p>
-<p>For example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.</p>
-</section>
-<section id="data-quality" class="level2">
-<h2 class="anchored" data-anchor-id="data-quality">Data Quality</h2>
-<p>The original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.</p>
-<p>Although the data-wrangling process attempted to address these issues, some unusual observations may remain.</p>
-</section>
-<section id="geographic-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="geographic-interpretation">Geographic Interpretation</h2>
-<p>Taxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.</p>
+<section id="how-to-use-the-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-use-the-dashboard">How to Use the Dashboard</h3>
+<p>Examine the hourly lines to compare <strong>pickup volume, drop-off volume, and average congestion surcharge</strong> throughout the day.</p>
+<p>Use the interactive <strong>legend</strong> to focus on pickup or drop-off patterns and reduce visual clutter.</p>
+<p>Hover over points to inspect individual hours and connect observations between the hourly visualization and scatterplot.</p>
+<p>Use the <strong>brush interaction</strong> on the hourly chart to select a range of hours. The corresponding observations will be highlighted in the scatterplot.</p>
+<p>Use the <strong>regression-line checkbox</strong> to display the overall relationship between trip volume and average congestion surcharge.</p>
+<p>Compare peak commuting periods with lower-volume hours to determine whether congestion surcharge follows the same pattern as taxi demand.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

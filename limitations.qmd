@@ -2,4 +2,58 @@
 title: "Limitations"
 ---
 
-TODO: Address the limitations and trade-offs that were considered
+# Limitations
+
+## Sampling
+
+The original cleaned dataset contains **727,433 observations**. Because of computational limitations and the difficulty of rendering large datasets interactively with Altair, a sample of the cleaned data was used for the exploratory visualizations.
+
+As a result, the dashboards should be interpreted as exploratory representations of the dataset rather than exact summaries of every green taxi trip in 2023.
+
+## Proxy for Satisfaction
+
+The dataset does not contain a direct measure of passenger satisfaction.
+
+Instead, we use:
+
+- trip dissatisfaction;
+- pickup and drop-off imbalance;
+- fare;
+- trip volume; and
+- congestion surcharge
+
+as observable proxies for aspects of the rider experience.
+
+These variables can provide useful evidence about efficiency, availability, and pricing, but they should not be interpreted as direct measurements of how satisfied passengers were.
+
+## Visual Complexity
+
+Some of the dashboards contain multiple coordinated visualizations and interactions. While these interactions support exploration, they can also increase cognitive load.
+
+In particular, the pickup/drop-off dashboard can become visually dense when many boroughs and hours are displayed simultaneously.
+
+## Individual Trip Visualization
+
+The trip-duration visualization displays individual trips. Showing too many observations at once can make the visualization crowded, which is why filtering and sampling are important.
+
+## Aggregation
+
+Several views rely on aggregated measures such as average fare, average congestion surcharge, or trip volume.
+
+Aggregated statistics can hide variation among individual trips. Two boroughs may have similar averages while having very different distributions.
+
+## Association vs. Causation
+
+The visualizations identify relationships and patterns in the data, but they do not establish causal relationships.
+
+For example, a relationship between trip volume and congestion surcharge should not automatically be interpreted as evidence that higher trip volume causes higher surcharge.
+
+## Data Quality
+
+The original dataset required substantial cleaning and transformation. Invalid values, missing observations, unusual fares, extreme trip distances, and other data-quality issues can influence the resulting visualizations.
+
+Although the data-wrangling process attempted to address these issues, some unusual observations may remain.
+
+## Geographic Interpretation
+
+Taxi zones do not necessarily correspond to neighborhoods in the way that a resident might understand them. Therefore, spatial patterns should be interpreted using the TLC taxi-zone definitions used in the dataset.

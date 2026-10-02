@@ -1,0 +1,38 @@
+---
+title: "Dashboard 2: Pickup and Drop-off Imbalances"
+---
+
+<script>
+  vegaEmbed('#dashboard2', './charts/dashboard2.json', {
+    renderer: 'svg',
+    actions: false,
+  })
+</script>
+
+<div id="dashboard2"></div>
+
+*Dashboard 2: Pickup and drop-off volumes, imbalances, and average fares across NYC boroughs and hours of the day.*
+
+### Significance
+
+This dashboard investigates how pickup and drop-off patterns reveal potential supply-demand imbalances across NYC boroughs.
+
+The flow visualization shows how taxi trips move between pickup and drop-off boroughs, while the hourly pickup and drop-off comparison highlights periods when substantially more passengers are entering or leaving a borough.
+
+Large differences between pickup and drop-off volumes can indicate uneven taxi activity and provide a proxy for potential differences in service availability. The dashboard also compares average fares during these periods to investigate how fare patterns are associated with pickup and drop-off imbalances.
+
+The Bronx is particularly useful to investigate because the exploratory analysis identified substantially more drop-offs than pickups in the borough.
+
+### How to Use the Dashboard
+
+Select a **pickup borough in the flow chart** to focus the remaining visualizations on trips originating from that borough.
+
+Examine the hourly pickup and drop-off volumes to identify periods when the two values differ substantially.
+
+Use the **brush interaction on the pickup/drop-off chart** to select particular hours of the day.
+
+The difference visualization will update to show the magnitude and direction of the pickup/drop-off imbalance during the selected hours.
+
+The fare visualization will also update, allowing you to compare average pickup and drop-off fares during those periods.
+
+Try selecting different boroughs and hours to determine where the largest imbalances occur and whether those periods are also associated with differences in average fares.

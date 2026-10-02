@@ -1,0 +1,146 @@
+---
+title: "Finding 2: Pickup and Drop-off Imbalances and Service Availability"
+---
+
+<script>
+
+  vegaEmbed('#finding2_chart1', './charts/finding2_view1_pickup_volume.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart2', './charts/finding2_view2_dropoff_volume.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart3', './charts/finding2_view3_pickup_dropoff_volume.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart4', './charts/finding2_view4_pickup_dropoff_imbalance.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart5', './charts/finding2_view5_average_fare_borough.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart6', './charts/finding2_view6_fare_distance.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart7', './charts/finding2_view7_fare_duration.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding2_chart8', './charts/finding2_view8_fare_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+</script>
+
+
+### Research Question
+
+**How do pickup and drop-off patterns reveal potential supply-demand imbalances, and how are these imbalances associated with fares?**
+
+
+### Finding
+
+Pickup and drop-off patterns reveal important differences in taxi activity across NYC boroughs. While pickup and drop-off volumes are generally relatively symmetric, some boroughs show noticeable imbalances that may indicate uneven taxi availability.
+
+The **Bronx** stands out because its drop-off volume is substantially higher than its pickup volume. This suggests that taxis frequently enter the Bronx with passengers but may have fewer passengers available for outbound trips.
+
+Although the dataset does not directly measure rider wait times, this imbalance can be interpreted as a **proxy for potential service availability**. If more taxis are entering an area than leaving with passengers, fewer taxis may be immediately available for new riders in that area.
+
+<div id="finding2_chart3"></div>
+
+*Figure 1: Overall pickup and drop-off volumes across NYC boroughs.*
+
+
+### Temporal Patterns
+
+Pickup and drop-off activity generally follows similar hourly patterns. Taxi activity increases substantially during the morning and evening commuting periods, while overall activity decreases after midnight.
+
+<div id="finding2_chart1"></div>
+
+*Figure 2: Pickup volume by borough and hour.*
+
+<div id="finding2_chart2"></div>
+
+*Figure 3: Drop-off volume by borough and hour.*
+
+Comparing pickup and drop-off volumes by hour helps identify periods when the balance between incoming and outgoing taxi trips changes. These differences provide additional context for understanding potential supply-demand mismatches.
+
+
+### Pickup and Drop-off Imbalance
+
+The overall difference between pickup and drop-off activity highlights the boroughs where taxi flows are least balanced.
+
+<div id="finding2_chart4"></div>
+
+*Figure 4: Difference between pickup and drop-off volumes by borough.*
+
+The Bronx shows the most noticeable imbalance, with substantially more drop-offs than pickups. This pattern is consistent with taxis carrying passengers into the borough without an equivalent number of passenger-carrying trips originating there.
+
+
+### Fare Patterns
+
+Fare distributions are generally similar across boroughs, but differences emerge when comparing trips by pickup and drop-off location.
+
+<div id="finding2_chart5"></div>
+
+*Figure 5: Average fare by pickup borough.*
+
+In particular, **drop-offs in the Bronx tend to have higher fares than pickups**. This may reflect differences in trip length and the prevalence of inter-borough trips entering the Bronx.
+
+The relationship between fare and trip characteristics can also be examined directly.
+
+<div id="finding2_chart6"></div>
+
+*Figure 6: Relationship between fare amount and trip distance.*
+
+<div id="finding2_chart7"></div>
+
+*Figure 7: Relationship between fare amount and trip duration.*
+
+These views provide context for interpreting fare differences across boroughs and routes.
+
+
+### Fare and Trip Dissatisfaction
+
+The relationship between fare amount and `trip_dissatisfaction` is relatively weak. High and low fares occur across a wide range of dissatisfaction values.
+
+<div id="finding2_chart8"></div>
+
+*Figure 8: Relationship between fare amount and trip dissatisfaction.*
+
+
+### Route Patterns
+
+The most frequent routes are concentrated within Manhattan, Queens, and Brooklyn, while several major cross-borough routes also account for substantial taxi activity.
+
+Routes such as Brooklyn–Manhattan, Manhattan–Bronx, and Manhattan–Queens are among the prominent cross-borough connections. These high-volume routes overlap with areas where inefficient trips are also observed.
+
+This suggests that frequently travelled areas can simultaneously experience high taxi demand and inefficient travel conditions.
+
+
+### Interpretation
+
+The pickup and drop-off imbalance provides evidence of **uneven taxi distribution across NYC**. The Bronx, in particular, receives substantially more taxi trips than it generates, suggesting that taxi availability may differ depending on trip direction.
+
+These patterns do not directly establish rider wait times or prove that fare differences are caused by supply-demand imbalance. Instead, they identify areas where pickup/drop-off patterns and fare characteristics provide useful indicators of differences in the taxi experience.
+
+
+### Limitations
+
+Pickup and drop-off volumes are used as an indirect measure of potential supply-demand imbalance. The dataset does not contain direct measurements of taxi availability, passenger wait time, or unmet demand.
+
+Therefore, the observed imbalances should be interpreted as **proxies rather than direct measurements of rider waiting time or satisfaction**.

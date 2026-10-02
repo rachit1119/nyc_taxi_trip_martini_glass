@@ -2,20 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TODO: Finding Title – {{Project Title}}</title>
+<title>Finding 1: Trip Efficiency Across Time, Boroughs, and Routes – FareSighted: NYC Green Taxi Trip Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-787e033c7b6f65c9dfccb6078e5d2d34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1bdbca75b362e6c5a8c09207907ff998.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -86,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-01.html">{{Page 1 Title}}</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-01.html">Finding 1: Trip Efficiency Across Time, Boroughs, and Routes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -98,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">{{Project Title}}</a> 
+      <a href="./">FareSighted: NYC Green Taxi Trip Analysis</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
@@ -121,27 +124,62 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finding-01.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">{{Page 1 Title}}</span></a>
+ <span class="menu-text">Finding 1: Trip Efficiency Across Time, Boroughs, and Routes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finding-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding 2: Pickup and Drop-off Imbalances and Service Availability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finding-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Finding 3: Congestion, Trip Volume, and Surcharge</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Interactive Dashboards</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 1: Trip Efficiency and Satisfaction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 2: Pickup and Drop-off Imbalances</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dashboard 3: Congestion and Surcharge</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Interactive Dashboard}}</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./limitations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{Project Limitations}}</span></a>
+ <span class="menu-text">Project Limitations</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">{{References &amp; Sources}}</span></a>
+ <span class="menu-text">References &amp; Sources</span></a>
   </div>
 </li>
     </ul>
@@ -153,9 +191,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-01.html">{{Page 1 Title}}</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./finding-01.html">Findings</a></li><li class="breadcrumb-item"><a href="./finding-01.html">Finding 1: Trip Efficiency Across Time, Boroughs, and Routes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TODO: Finding Title</h1>
+<h1 class="title">Finding 1: Trip Efficiency Across Time, Boroughs, and Routes</h1>
 </div>
 
 
@@ -172,30 +210,120 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- TODO: Copy and Paste this template for other findings -->
 <script>
-  // TODO: Update the JSON file paths to match your exported Altair/Vega-Lite chart specifications
-  vegaEmbed('#chart1', './charts/placeholder_chart.json', {
+
+  vegaEmbed('#finding1_chart1', './charts/finding1_view1_trip_volume.json', {
     renderer: 'svg',
-    actions: false,
+    actions: false
   })
 
-  vegaEmbed('#chart2', './charts/scatter_placeholder.json', {
+  vegaEmbed('#finding1_chart2', './charts/finding1_view2_trip_duration.json', {
     renderer: 'svg',
-    actions: false,
+    actions: false
   })
+
+  vegaEmbed('#finding1_chart3', './charts/finding1_view3_trip_dissatisfaction_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart4', './charts/finding1_view4_dissatisfaction_borough_hour.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart5', './charts/finding1_view5_distance_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart6', './charts/finding1_view6_duration_dissatisfaction.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart7', './charts/finding1_view7_borough_route_heatmap.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
+  vegaEmbed('#finding1_chart8', './charts/finding1_view8_route_duration_distance.json', {
+    renderer: 'svg',
+    actions: false
+  })
+
 </script>
-<div id="chart1">
+<section id="research-question" class="level3">
+<h3 class="anchored" data-anchor-id="research-question">Research Question</h3>
+<p><strong>How does trip efficiency vary across time, boroughs, and routes, and where do riders experience the most inefficient trips?</strong></p>
+</section>
+<section id="finding" class="level3">
+<h3 class="anchored" data-anchor-id="finding">Finding</h3>
+<p>Our exploratory analysis shows that trip efficiency varies substantially across NYC green taxi trips. Because trip duration alone does not account for the distance travelled, we use <strong>trip time per mile</strong> as a proxy for trip efficiency and potential rider dissatisfaction.</p>
+<p>Most taxi trips are relatively short, with the majority concentrated within the 0–5 mile range. Trip duration is strongly right-skewed: the average trip lasts approximately 18 minutes, while a small number of extreme trips last several hours. These outliers demonstrate why raw trip duration alone can be misleading when evaluating the efficiency of a trip.</p>
+<p>The derived <code>trip_dissatisfaction</code> metric, calculated as trip duration divided by trip distance, provides a more informative measure of efficiency. The average is approximately 11 minutes per mile, while the median is approximately 6 minutes per mile. Extreme observations, including unusually long trips over very short distances, substantially increase the mean.</p>
+<div id="finding1_chart1">
 
 </div>
-<p><em>Figure 1: TODO: Update the figure caption accordingly</em></p>
-<p>TODO: Explain the significance of the plot</p>
-<div id="chart2">
+<p><em>Figure 1: Trip volume across the 24 hours of the day.</em></p>
+<div id="finding1_chart2">
 
 </div>
-<p><em>Figure 2: TODO: Update the figure caption accordingly</em></p>
+<p><em>Figure 2: Average trip duration across the 24 hours of the day.</em></p>
+</section>
+<section id="temporal-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-patterns">Temporal Patterns</h3>
+<p>Trip volume increases sharply during the morning commute, particularly between <strong>7–9 AM</strong>, and rises again during the evening rush hour around <strong>5 PM</strong>.</p>
+<p>Although average trip durations remain relatively stable throughout much of the day, dissatisfaction varies across boroughs and hours.</p>
+<div id="finding1_chart3">
+
+</div>
+<p><em>Figure 3: Average trip dissatisfaction, measured as trip time per mile, across hours of the day.</em></p>
+<p>Manhattan and the Bronx exhibit higher levels of average dissatisfaction overall, while Staten Island has the lowest average dissatisfaction at approximately 3 minutes per mile. The time of peak dissatisfaction also differs between boroughs, suggesting that inefficiency is influenced by localized traffic and travel conditions.</p>
+<div id="finding1_chart4">
+
+</div>
+<p><em>Figure 4: Average trip dissatisfaction across pickup boroughs and hours of the day.</em></p>
+</section>
+<section id="relationship-between-distance-duration-and-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="relationship-between-distance-duration-and-efficiency">Relationship Between Distance, Duration, and Efficiency</h3>
+<p>Trip distance and trip duration provide important context for interpreting trip dissatisfaction. A longer trip is not necessarily inefficient if the additional travel time is proportional to the distance travelled.</p>
+<div id="finding1_chart5">
+
+</div>
+<p><em>Figure 5: Relationship between trip distance and trip dissatisfaction.</em></p>
+<div id="finding1_chart6">
+
+</div>
+<p><em>Figure 6: Relationship between trip duration and trip dissatisfaction.</em></p>
+<p>These views show that dissatisfaction is not determined simply by trip distance or trip duration. Short trips can have relatively high time-per-mile values, while long trips can have relatively low values.</p>
+</section>
+<section id="route-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="route-patterns">Route Patterns</h3>
+<p>Route-level analysis highlights several corridors with particularly long travel times. Brooklyn–Bronx, Queens–Staten Island, and Manhattan–EWR contain some of the longest-duration trips. However, not all high-duration routes are also the longest-distance routes.</p>
+<p>In particular, the <strong>Brooklyn–Bronx corridor</strong> has relatively high trip duration without being among the longest-distance routes. This indicates lower trip efficiency and suggests that traffic or route-specific conditions may contribute to longer travel times.</p>
+<div id="finding1_chart7">
+
+</div>
+<p><em>Figure 7: Average trip dissatisfaction across pickup and drop-off borough combinations.</em></p>
+<div id="finding1_chart8">
+
+</div>
+<p><em>Figure 8: Average trip duration and distance across borough-to-borough routes, with point size representing trip volume.</em></p>
+<p>Other routes, including Bronx–Brooklyn and Queens–Brooklyn, also show relatively high levels of dissatisfaction.</p>
+</section>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>Overall, the analysis suggests that trip dissatisfaction is not determined simply by how long a trip lasts or how far it travels. Instead, the relationship between <strong>time and distance</strong> provides a more useful way to identify inefficient trips.</p>
+<p>Trips that require substantially more time than expected for their distance may indicate congestion, route-specific inefficiencies, or other travel conditions that can negatively affect the rider experience.</p>
+</section>
+<section id="limitations" class="level3">
+<h3 class="anchored" data-anchor-id="limitations">Limitations</h3>
+<p><code>trip_dissatisfaction</code> is a <strong>proxy for rider satisfaction</strong>, rather than a direct measurement of satisfaction. The dataset does not contain an explicit rider satisfaction score.</p>
+<p>Extreme trip durations and very short distances can also produce unusually large values, so these observations should be interpreted carefully.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
