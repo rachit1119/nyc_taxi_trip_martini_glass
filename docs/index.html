@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -263,7 +292,11 @@ The total amount charged to the passenger, excluding cash tips.</p>
 The amount collected for the New York State congestion surcharge.</p>
 <p><strong><code>trip_dissatisfaction</code></strong><br>
 A derived proxy for trip inefficiency, calculated as:</p>
-<p>[ = ]</p>
+<p><span class="math display">\[
+\text{trip dissatisfaction}
+=
+\frac{\text{trip duration}}{\text{trip distance}}
+\]</span></p>
 <p>A higher value indicates more minutes spent per mile.</p>
 <p><strong><code>month</code></strong><br>
 The month in which the trip occurred.</p>
